@@ -20,7 +20,11 @@ public class class1 {
 		*/
 		
 		
-		
+		// code convention(코딩 규칙) 
+		// : javadoc을 써서 도움말을 만들 예정일 경우.
+		// 주석을 /** ~ */ 형식을 사용.
+				
+				
 		
 		
 
