@@ -16,6 +16,8 @@ public class Class4 {
 		
 		int a = 10;
 		String b = "10";
+		char c = 'a';
+		int d = 2;
 		
 		System.out.println(a);
 		
@@ -24,6 +26,14 @@ public class Class4 {
 		System.out.println(a+b);
 		
 		System.out.println(b+b);
+		
+		System.out.println(c);
+		
+		System.out.println(c + b);
+		
+		System.out.println(c * a); // 유니코드로 계산가능.
+		
+		System.out.println(Math.pow(d, a));
 	}
 
 }
