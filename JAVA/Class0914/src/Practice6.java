@@ -19,6 +19,7 @@ public class Practice6 {
 			}
 			System.out.println();
 		}
+		
 
 	}
 
