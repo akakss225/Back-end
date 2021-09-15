@@ -10,13 +10,13 @@ public class Class5 {
 		
 		for(int i = 0; i < 3; i++) {
 			System.out.print(i + " >> ");
-			n = sc.nextInt();
 			try {
+				n = sc.nextInt();
 				System.out.println(n);
 				sum += n;
 			}
 			catch(Exception e) {
-				System.out.println("정수가 아닙니다. 다시입력하세요.");
+				System.out.println("정수가 아닙니다. 다시입력하세요. ");
 				sc.nextInt();
 				i--;
 				continue;
