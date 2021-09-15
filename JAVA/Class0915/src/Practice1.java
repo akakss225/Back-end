@@ -31,6 +31,7 @@ public class Practice1 {
 			System.out.println("major : " + students[i][1]);
 			System.out.println("-----------------------");
 		}
+		sc.close();
 		
 	}
 
