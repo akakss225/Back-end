@@ -16,6 +16,7 @@ public class Book {
 	public void getInfo() {
 		System.out.println("Book name : " + name);
 		System.out.println("Author name : " + author);
+		System.out.println("---------------------------");
 	}
 	
 
@@ -30,9 +31,7 @@ public class Book {
 		Book muhyeop = new Book("화산권마", "송수민");
 		
 		littlePrince.getInfo();
-		System.out.println("---------------------------");
 		fantasy.getInfo();
-		System.out.println("---------------------------");
 		muhyeop.getInfo();
 
 	}
