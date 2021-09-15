@@ -9,6 +9,11 @@ public class Circle {
 	
 	public Circle() {}
 	
+	public Circle(int r) {
+		radius = r;
+		name = "";
+	}
+	
 	public Circle(int r, String n) {
 		radius = r; name = n;
 	}
