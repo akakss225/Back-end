@@ -1,6 +1,8 @@
 package Inheritance;
 
-public class Person {
+class Person {
+	String name;
+	
 	
 	public void talk() {
 		System.out.println("Blah Blah Blah~");

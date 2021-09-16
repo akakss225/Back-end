@@ -11,24 +11,30 @@ public class Class9 {
 		
 		StudentWorker yoo = new StudentWorker();
 		
-		Researcher na = new Researcher();
+		Researcher la = new Researcher();
 		
 		Professor jo = new Professor();
 		
-		System.out.println("---------------------- kim ------------");
+		System.out.println("---------------------- Kim ------------");
+		kim.name = "min";
+		System.out.println(kim.name);
 		kim.talk();
 		kim.eat();
 		kim.walk();
 		kim.sleep();
 		
-		System.out.println("---------------------- song ------------");
+		System.out.println("---------------------- Song ------------");
+		song.name = "su min";
+		System.out.println(song.name);
 		song.talk();
 		song.eat();
 		song.walk();
 		song.sleep();
 		song.study();
 		
-		System.out.println("---------------------- yoo ------------");
+		System.out.println("---------------------- Yoo ------------");
+		yoo.name = "seung jong";
+		System.out.println(yoo.name);
 		yoo.talk();
 		yoo.eat();
 		yoo.walk();
@@ -36,14 +42,18 @@ public class Class9 {
 		yoo.study();
 		yoo.work();
 		
-		System.out.println("---------------------- na ------------");
-		na.talk();
-		na.eat();
-		na.walk();
-		na.sleep();
-		na.research();
+		System.out.println("---------------------- La ------------");
+		la.name = "ho jun";
+		System.out.println(la.name);
+		la.talk();
+		la.eat();
+		la.walk();
+		la.sleep();
+		la.research();
 		
-		System.out.println("---------------------- jo ------------");
+		System.out.println("---------------------- Jo ------------");
+		jo.name = "jae young";
+		System.out.println(jo.name);
 		jo.talk();
 		jo.eat();
 		jo.walk();
