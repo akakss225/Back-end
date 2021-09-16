@@ -2,7 +2,12 @@
 public class Class3 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		// 객체 소멸 : new 에 의해 할당된 객체 메모리를 자바 가상 기계의 가용 메모리로 되돌려주는 행위.
+		// 가비지 컬렉터 : 가리키는 레퍼런스가 하나도 없는 객체를 소멸시켜주는 기능.
+		// 가비지 컬렉터의 경우 직접소멸이 아니기 때문에 즉시 소멸이 아닌 일정 시간 이후에 소멸되는 단점이 있다.
+		
+		
 
 	}
 
