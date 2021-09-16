@@ -26,7 +26,7 @@ public class Class4 {
 		
 		Sample sample = new Sample(10);
 		
-		System.out.println(sample.b);
+		// System.out.println(sample.b);
 		
 
 	}
