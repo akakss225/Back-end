@@ -25,5 +25,4 @@ public class Class11 {
 		C c = new C();
 
 	}
-
 }
