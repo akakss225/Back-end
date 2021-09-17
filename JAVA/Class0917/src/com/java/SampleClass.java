@@ -1,9 +1,11 @@
 package com.java;
 
+import com.java.graphic.GraphicTest;
+
 public class SampleClass {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		GraphicTest gtc = new GraphicTest();
 
 	}
 
