@@ -39,7 +39,19 @@ public class grammar {
 								  
 13. 패키지 :
 			java.lang >> 스트링, 수학함수, 입출력 등 자바프로그래밍에 필요한 기본적인 클래스와 인터페이스. 자동으로 import됨.
-			java.util >> 유틸리티 패키지. 
+			java.util >> 유틸리티 패키지.
+			
+14. Wrapper클래스 : 기본타입 >> byte / short /    int    / long /   char    / float / double / boolean
+				  Wrapper>> Byte / Short / Interger / Long / Character / Float / Double / Boolean
+				  변수 선언 방법 >> Interger i = Interger.valueOf("10");
+				   			    Double d = Double.valueOf("3.14");
+							    Boolea b = Boolea.valueOf(true);
+
+15. static int parseInt(String s) : 문자열 s를 10진 정수로 변환한 값 리턴. >> int i = Interger.parseInt("123"); >> i = 123
+																   >> String s = Interger.toString(123) >> s = "123"
+
+																   
+
 		
 	}
 
