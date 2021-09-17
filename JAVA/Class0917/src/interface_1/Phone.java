@@ -1,4 +1,4 @@
-package InterfacePractice;
+package interface_1;
 
 public class Phone implements PhoneInterface {
 

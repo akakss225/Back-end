@@ -1,4 +1,4 @@
-package AbstractPractice;
+package abstract_1;
 
 // 객체 생성 불가.
 abstract class Shape{

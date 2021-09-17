@@ -1,4 +1,4 @@
-package AbstractPractice;
+package abstract_1;
 
 abstract class Calculator{
 	public abstract int add(int a, int b);

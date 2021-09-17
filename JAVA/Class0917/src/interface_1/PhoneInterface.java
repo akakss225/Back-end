@@ -1,4 +1,4 @@
-package InterfacePractice;
+package interface_1;
 
 interface PhoneInterface {
 	public static final int TIMEOUT = 10000;
