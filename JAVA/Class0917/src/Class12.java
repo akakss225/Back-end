@@ -1,7 +1,7 @@
 
 public class Class12 {
 
-	public static void main(String[] args) {	
+	public static void main(String[] args) {
 		
 		String a = "Hello";
 		String b = "Java";
@@ -16,6 +16,7 @@ public class Class12 {
 		System.out.println(e.equals(f)); // true
 		
 		System.out.println(a.concat(b)); // 원본 변화없이 두 문자열을 합치는 메소드
+		
 	}
 
 }
