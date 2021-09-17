@@ -50,7 +50,10 @@ public class grammar {
 15. static int parseInt(String s) : 문자열 s를 10진 정수로 변환한 값 리턴. >> int i = Interger.parseInt("123"); >> i = 123
 																   >> String s = Interger.toString(123) >> s = "123"
 
-																   
+16. 박싱 >> 기본 타입의 값을 Wrapper 객체로 변환. 
+    언박싱 >> Wrapper 객체에 들어있는 기본 타입의 값을 빼내는 것.
+
+
 
 		
 	}
