@@ -1,5 +1,7 @@
 
 class Shape{
+	public Shape next;
+	public Shape() {next = null;}
 	public void draw() {
 		System.out.println("Shape");
 	}
@@ -40,6 +42,34 @@ public class Class1 {
 		paint(new Rect());
 		paint(new Circle());
 		
+		
+		System.out.println("----------------------------------");
+		
+		Shape start, last, obj;
+		
+		start = new Line();
+		last = start;
+		obj = new Line();
+		last.next = obj;
+		last = obj;
+		
+		obj = new Rect();
+		last.next = obj;
+		last = obj;
+		
+		obj = new Circle();
+		last.next = obj;
+		last = obj;
+		
+		obj = new Shape();
+		last.next = obj;
+		last = obj;
+		
+		Shape p = start;
+		while(p != null) {
+			p.draw();
+			p = p.next;
+		}
 
 	}
 
