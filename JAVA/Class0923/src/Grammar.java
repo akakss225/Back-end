@@ -47,6 +47,13 @@ public class Grammar {
 //	다만, 추상클래스기 때문에 new Calendar 하지않음. >> Calendar now = Calendar.getInstance();
 	
 	
+//	제네릭과 컬렉션.
+//	collection : 요소(element) 객체들의 저장소. 객체들의 컨테이너라고도 불림.
+//				요소의 갯수에 따라 크기 자동 조절. 요소의 삽입, 삭제에 따른 요소의 위치 자동 이동. >> ArrayList와 비슷.
+//				고정크기의 배열을 다루는 어려움 해소. 다양한 객체들의 삽입 삭제 검색등의 관리 용이.
+//	Vector<E> >>>> ArrayList : 비슷한데, 속도가 개선된 버전이 ArrayList이다.
+//	Vector<Interger> v = new Vector<Integer>(); >> <> 안에는 무조건 Wrapper Class를 써야함 ex) Integer / String ...
 	
-
+	
+	
 }
