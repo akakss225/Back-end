@@ -53,6 +53,7 @@ public class Grammar {
 //				고정크기의 배열을 다루는 어려움 해소. 다양한 객체들의 삽입 삭제 검색등의 관리 용이.
 //	Vector<E> >>>> ArrayList : 비슷한데, 속도가 개선된 버전이 ArrayList이다.
 //	Vector<Interger> v = new Vector<Integer>(); >> <> 안에는 무조건 Wrapper Class를 써야함 ex) Integer / String ...
+//	ArrayList : 가변 크기 배열을 구현한 클래스. 벡터와 매우 유사하지만, 벡터와는 달리 스레드 동기화 기능이 없다. >> 속도가 빠름
 	
 	
 	

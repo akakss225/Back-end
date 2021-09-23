@@ -29,9 +29,10 @@ public class Class8 {
 		
 		System.out.println(v);
 		
+		// 백터에 있는 Point 객체 모두 검색하여 출력
 		for(int i = 0; i < v.size(); i++) {
-			Point p = v.get(i);
-			System.out.println(p);
+			Point p = v.get(i); // 벡터에서 i 번째 객체 얻어내기
+			System.out.println(p); // p.toString()을 이용하여 객체 p 출력
 		}
 
 	}
