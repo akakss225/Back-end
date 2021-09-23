@@ -5,6 +5,9 @@ public class Grammar {
 //	문자열이 같으면 0을 리턴하는 int compareTo(String anotherString) 문법.
 //	이 문자열이 anotherString보다 사전에 먼저 나오면 음수 리턴 ( A, B ,C 순서 )
 //	반대는 양수 출력. >> ex) String apple = "apple"; /  int i = apple.compareTo("banana") == 음수.
+	
+	
+	
 //	StringBuffer : 가변 크기의 문자열 저장 클래스.
 //	String 클래스와 달리 문자열(원본) 변경 가능.
 //	StringBuffer 객체의 크기는 스트링 길이에 따라 가변적.
@@ -18,8 +21,13 @@ public class Grammar {
 //			   charAt(index) >> 인덱스자리 문자를 char데이터 타입으로 출력
 //			   setLength(num) >> 지정한 숫자만큼 문자열을 앞에서부터 자름.
 	
+	
+	
 //	StringTokenizer : 문자열을 분리할 때 사용되는 기준문자
 //	ex ) String query = "name = kitae&addr = seoul&age = 21"; / StringTokenizer st = new StringTokenizer(query,"&");
 //					  >> 'name = kitae' / 'addr = seoul' / 'age = 21'
+	
+	
+	
 
 }
