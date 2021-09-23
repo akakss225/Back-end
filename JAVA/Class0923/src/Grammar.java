@@ -54,7 +54,10 @@ public class Grammar {
 //	Vector<E> >>>> ArrayList : 비슷한데, 속도가 개선된 버전이 ArrayList이다.
 //	Vector<Interger> v = new Vector<Integer>(); >> <> 안에는 무조건 Wrapper Class를 써야함 ex) Integer / String ...
 //	ArrayList : 가변 크기 배열을 구현한 클래스. 벡터와 매우 유사하지만, 벡터와는 달리 스레드 동기화 기능이 없다. >> 속도가 빠름
+//	Iterator<E> : Vector , ArrayList등이 상속받는 인터페이스.
+//				  리스트 구조의 컬렉션에서 요소의 순차 검색을 위한 메소드를 포함한다.
+//				  boolean hasNext() : 방문할 요소가 남아있으면 true
+//				  E next() : 다음 요소 리턴 
 	
-	
-	
+
 }

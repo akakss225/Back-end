@@ -28,6 +28,7 @@ public class Class9 {
 		
 		arr.clear();
 		System.out.println(arr);
+		
 
 	}
 
