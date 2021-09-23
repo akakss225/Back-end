@@ -28,6 +28,17 @@ public class Grammar {
 //					  >> 'name = kitae' / 'addr = seoul' / 'age = 21'
 	
 	
+//	Math : 산술연산 메소드 제공. 모든 메소드는 static타입. 클래스 이름으로 바로 호출해야함.
+//	static double abs(double a) : 절댓값 리턴.
+//	static double cos(double a) : cosine return
+//	...
+//	Math.PI : 원주율 상수 출력
+//	Math.ceil : 올림
+//	Math.floor(a) : 내림
+//	Math.sqrt(9) : 제곱근 == 3
+//	Math.exp(2) : e^2
+//	Math.round(num) : 반올림
+//	난수 발생 : static double random() : 0.0 ~ 1.0미만의 임의의 double 값 반환.
 	
 
 }
