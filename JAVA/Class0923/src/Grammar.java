@@ -17,5 +17,9 @@ public class Grammar {
 //			   length() >> 길이 출력.
 //			   charAt(index) >> 인덱스자리 문자를 char데이터 타입으로 출력
 //			   setLength(num) >> 지정한 숫자만큼 문자열을 앞에서부터 자름.
+	
+//	StringTokenizer : 문자열을 분리할 때 사용되는 기준문자
+//	ex ) String query = "name = kitae&addr = seoul&age = 21"; / StringTokenizer st = new StringTokenizer(query,"&");
+//					  >> 'name = kitae' / 'addr = seoul' / 'age = 21'
 
 }
