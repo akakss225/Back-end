@@ -16,6 +16,7 @@ class Play extends BaseballGame {
 		if(check.equals("Yes")) {
 			this.state = true;
 			System.out.println("Let's Go~ XO");
+			super.start();
 			
 		}
 		else if (check.equals("No")) {
