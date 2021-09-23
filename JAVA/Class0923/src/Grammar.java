@@ -1,3 +1,4 @@
+import java.util.Calendar;
 
 public class Grammar {
 	
@@ -39,6 +40,13 @@ public class Grammar {
 //	Math.exp(2) : e^2
 //	Math.round(num) : 반올림
 //	난수 발생 : static double random() : 0.0 ~ 1.0미만의 임의의 double 값 반환.
+	
+	
+//	Calendar : 날짜클래스
+//	생성자는 두종류 : Calendar() / Calendar(TimeZone zone, Locale aLocale)
+//	다만, 추상클래스기 때문에 new Calendar 하지않음. >> Calendar now = Calendar.getInstance();
+	
+	
 	
 
 }
