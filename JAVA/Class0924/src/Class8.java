@@ -22,7 +22,7 @@ public class Class8 {
 			
 		}
 		catch(IOException e) {
-			
+			e.printStackTrace();
 		}
 		
 		
