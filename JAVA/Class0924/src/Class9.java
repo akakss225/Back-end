@@ -27,13 +27,12 @@ public class Class9 {
 		}
 		System.out.println(f1.getPath() + "는 " + res + "입니다.");
 		
-		File f2 = new File("경로");
+		File f2 = new File("/Applications/Eclipse.app/Contents/Eclipse/eclipse.ini");
 		if(f2.exists()) { // 존재하는지 여부 확인
 			f2.mkdir(); // 디렉토리 생성.
 		}
-		listDirectory(new File("경로"));
-		f2.renameTo(new File("경로 + 바꿀이름"));
-		listDirectory(new File("경로"));
+		listDirectory(f2);
+		
 		
 	}
 
