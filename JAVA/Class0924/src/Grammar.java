@@ -33,7 +33,30 @@ public class Grammar {
 //				   파일 관리 기능. >> 파일 이름 변경, 삭제, 디렉토리 생성, 크기등 파일 관리.
 //		
 		
+//		CLI (Command Line Interface) >> 흔히 불리는 DOS / 지금은 명령 프롬프트 혹은 terminal이라고 불림
+//		GUI (Graphic User Interface)
+//		OS발전사
+//		1. 메인프레임에 기본 탑재되는 OS
+//		2. Unix >> Server, Workstation등에서 사용 >> c언어가 Unix를 위해서 만든 언어라는 이야기도 있음
+//		3. Mac OS >> Unix모티브
+//		4. DOS
+//		5. MS-Windows
+//		6. Linux >> Unix의 클론
 		
+//		MS-Widows에서 윈도우 프로그램 작성시 사용하는 언어 
+//		0. C언어 >> win32 API
+//		1. visual C++ >> MFC (진입장벽이 높)
+//		2. visual basic (쉽게 만들어짐.)
+//		>> Dephi, Power Builder등과 비슷
+//		3. visual C# >> java를 벤치마킹해서 만듬.		
+//		
+//		java또한 MS-Windows용 윈도우프로그램 작성 가능 >> java의 장점은 만들어놓으면, 맥에서도 사용가능.
+//		ex) 이클립스, sql developer
+		
+		
+
+		
+	
 
 	}
 
