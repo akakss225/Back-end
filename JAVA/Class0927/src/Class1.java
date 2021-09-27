@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 
 class MyFrame extends JFrame{
 	public MyFrame() {
-		this.setTitle("ContentPane과 JFrame"); // 앞에 this를 쓰는게 좋은 습관.!!
+		this.setTitle("ContentPane과 JFrame"); // 앞에 this를 쓰는게 좋은 습관!!
 		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // close버튼 눌르면 윈도우 종료하는기능 활성화. 꼭 적어야함.
 		// System.exit(0) >> 언제 어디서나 무조건 종료하게 해주는 기능
