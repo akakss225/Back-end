@@ -12,6 +12,7 @@ public class Class5 extends JFrame {
 		c.add(btn);
 		
 		btn.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				JButton b = (JButton)e.getSource();
 				if(b.getText().equals("Action")) {
@@ -20,7 +21,8 @@ public class Class5 extends JFrame {
 				else {
 					b.setText("Action");
 				}
-		}});
+			}
+		});
 		
 		this.setSize(350, 150);
 		this.setVisible(true);
