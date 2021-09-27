@@ -1,10 +1,11 @@
-import java.io.*;
+import java.io.FileReader;
 
 public class Class6 {
 
 	public static void main(String[] args) {
 		
 		FileReader fin = null;
+		
 		
 		try {
 			fin = new FileReader("test");
@@ -14,7 +15,7 @@ public class Class6 {
 			}
 			fin.close();
 		}
-		catch(IOExeption e) {
+		catch(Exception e) {
 			System.out.println("입출력 오류");
 		}
 
