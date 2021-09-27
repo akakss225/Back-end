@@ -27,7 +27,7 @@ public class MouseListenerEx extends JFrame {
 	class MyMouseListener implements MouseListener{
 
 		@Override
-		public void mouseClicked(MouseEvent e) {
+		public void mouseClicked(MouseEvent e) { // 사용하지 않는 추상 메소드라 하더라도 정의는 해주어야함.
 			// TODO Auto-generated method stub
 			
 		}

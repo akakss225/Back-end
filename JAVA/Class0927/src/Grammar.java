@@ -55,6 +55,13 @@ public class Grammar {
 //		3. 익명클래스로 작성 : 클래스의 이름 없이 간단히 리스너 작성
 //		4. Event Listener를 직접 상속
 		
+//		keyPressed : 누르는 순간
+//		keyReleased : 누른 키를 뗴는 순간
+//		keyTyped : 누른 키를 떼는 순간, Unicode키가 입력된 경우에만. >> shift, alt, function, up, down, left, right등 과 같은 기능키들은 Unicode값이 없음.
+//		키의 문자 코드(유니코드) 알아내기 : char KeyEvent.getKeyChar();
+//		키의 코드명 알아내기 : int keyEvent.getKeyCode();
+		
+		
 
 	}
 
