@@ -20,6 +20,7 @@ public class Class3 extends JFrame {
 		this.setVisible(true);
 	}
 
+// 독립 클래스
 class MyActionListener implements ActionListener{
 
 	public void actionPerformed(ActionEvent e) {

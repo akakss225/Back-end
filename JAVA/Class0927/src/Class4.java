@@ -26,7 +26,7 @@ public class Class4 extends JFrame {
 		this.setVisible(true);		
 	}
 	
-
+	// 내부 클래스
 	private class MyActionListener implements ActionListener{
 
 		@Override
