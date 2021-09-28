@@ -52,4 +52,75 @@ public class Grammar {
 //	>> JRadioButton(String text, boolean selected)
 //	>> JRadioButton(String text, Icon image) 문자열과 이비지를 가진 라디오 버튼
 	
+//	텍스트필드 : 한줄짜리 텍스트 입력창을 구현한 컴포넌트
+//	
+//	생성자
+//	>> JTextField()
+//	>> JTextField(int cols) 입력창의 열의 개수가 cols개인 텍스트필드
+//	>> JTextField(String text) text문자열로 초기화된 텍스트필드
+//	>> JTextField(String text, int cols)
+//	문자열 편집 불가능하게 하기 : JTextField.setEditable(false);
+//	입력창에 문자열 출력 : JTextField.setText("Hello");
+//	문자열의 폰트 지정 : JTextField.setFont(new Font("고딕체", Font.ITALIC, 20));
+	
+//	텍스트 영역 : 여러줄을 입력할 수 있는 텍스트 입력창
+//
+//	생성자
+//	>> JTextArea()
+//	>> JTextArea(int rows, int cols) row x cols의 텍스트영엉
+//	>> JTextArea(String text) text문자열로 초기화된 텍스트영역
+//	>> JTextArea(String text, int rows, int cols)
+//	추가적으로 new JScrollPane(new JTextArea()) 를 이용해 텍스트영역에 스크롤을 추가하여 코딩한다.
+	
+//	JList : 여러개의 아이템을 리스트 형식으로 보여주고 선택하는 컴포넌트
+//	
+//	생성자
+//	>> JList<E>()
+//	>> JList<E>(E array) 배열을 넣음
+//	>> JList<ImageIcon>(ImageIcon img) 이미지로 리스트를 만듬
+//	마찬가지로 스크롤이 생성되게 하려면, JScrollPane(new JList()) 을 이용.
+	
+//	리스트를 수정하는 간단한 방법
+//	Vector<String> v = new Vector<String>(); ~~ 데이터
+//	v.add("이름1");
+//	v.add("이름2");
+//	JList<String> nameList = new JList<String>(v); >> 데이터를 담당하는 v를 넣어서 생성자를 만듬 ~~ ui
+//	
+//	벡터 v를 수정하고, 벡터 v를 리스트에 다시 담기
+//	v.add("이름3");
+//	nameList.setListData(v); >> 일종의 새로고침.
+	
+//	JComboBox<E> : 텍스트 필드와 버튼, 그리고 드롭다운 리스트로 구성
+//	
+//	생성자
+//	>> JComboBox<E>()
+//	>> JComboBox<E>(Vector ListData) 벡터로부터 아이템을 공급받는 콤보박스
+//	>> JComboBox<E>(Object[] ListData) 배열로부터 아이템을 공급받는 콤보박스
+	
+//	JSlider : 마우스로 움직이면서 값을 선택하는 컴포넌트
+//	
+//	생성자
+//	>> JSlider()
+//	>> JSlider(int orientation) orientation  방향의 슬라이더 생성 : JSlider.HORIZONTAL > 수평  /  JSlider.VERTICAL 수직
+//	>> JSlider(int min, int max, int val) 최소, 최대, 초기값을 가진 슬라이더 생성
+//	ChangeListener와 함께 사용. 
+
+	
+	
+	
+	
+//	****** MVC 패턴 ******
+//	Model : 데이터
+//	View : ui
+//	Controller : 로직
+//	>> 데이터와 ui와 로직을 분리해서 개발.
+//	
+//	~~ 예전에는 분리없이 개발을 했음. 이후에 처음 ui를 분리가 되고, 그 다음엔 데이터, 로직 순서대로 분리가 되어 작업이 됐음.
+//	>> UI분리 : 디자이너와의 협업 편리 / Data분리 : Data 관리, DB연동 등이 편리
+//	**********************
+	
+	
+	
+	
+	
 }
