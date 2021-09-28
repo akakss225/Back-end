@@ -28,4 +28,13 @@ public class Grammar {
 	
 //	버튼에 마우스가 올라갈 때 출력되는 이미지 : setRolloverIcon()
 //	버튼을 누르고 있는 동안 ㅜㅊㄹ력되는 이미지 : setPressdIcon()
+	
+//	체크박스 생성자
+//	>> JCheckBox()
+//	>> JCheckBox(String text)
+//	>> JCheckBox(String text, boolean) 문자열 체크박스, 체크여부
+//	>> JCheckBox(String text, Icon image) 문자열과 이미지를 가진 체크박스.
+//	item 이벤트 처리 : 체크박스나 라디오 버튼의 선택 상태가 바뀔 때 발생하는 이벤트를 item 이벤트라고 함.
+//					itemStateChange(ItemEvent e) >> 추상메소드 존재.
+//					>> 주요 메소드 : getStateChange() / getItem()
 }
