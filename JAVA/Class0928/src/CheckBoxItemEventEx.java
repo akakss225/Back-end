@@ -27,7 +27,6 @@ public class CheckBoxItemEventEx extends JFrame {
 		
 		this.setSize(250, 200);
 		this.setVisible(true);
-		
 	}
 	class MyItemListener implements ItemListener{
 		private int sum = 0;
