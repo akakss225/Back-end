@@ -37,4 +37,19 @@ public class Grammar {
 //	item 이벤트 처리 : 체크박스나 라디오 버튼의 선택 상태가 바뀔 때 발생하는 이벤트를 item 이벤트라고 함.
 //					itemStateChange(ItemEvent e) >> 추상메소드 존재.
 //					>> 주요 메소드 : getStateChange() / getItem()
+	
+//	라디오 버튼 : 여러 버튼으로 그룹을 형성하고, 하나만 선택되는 기능
+//			   다른 버튼이 선택되면 이전에 선택된 버튼은 자동으로 해제됨.
+	
+//	버튼 그룹 객체 생성 : ButtonGroup group = new ButtonGroup();
+//					 btn1, btn2, btn3 >> group.add(btn1) / group.add(btn2) / group.add(btn3)
+//			   
+//	라디오 버튼 생성자
+//	>> JRadioButton()
+//	>> JRadioButton(Icon Image) 이미지 라디오버튼
+//	>> JRadioButton(Icon Image, boolean selected) 이미지 라디오버튼 , 체크여부
+//	>> JRadioButton(String text) 문자열 라디오버튼
+//	>> JRadioButton(String text, boolean selected)
+//	>> JRadioButton(String text, Icon image) 문자열과 이비지를 가진 라디오 버튼
+	
 }
