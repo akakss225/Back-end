@@ -9,13 +9,20 @@ public class TextFieldEx extends JFrame {
 		Container c =  getContentPane();
 		c.setLayout(new FlowLayout());
 		
+		c.add(new JLabel("이름"));
+		c.add(new JTextField(20));
+		c.add(new JLabel("학과"));
+		c.add(new JTextField("컴퓨터공학과", 20));
+		c.add(new JLabel("주소"));
+		c.add(new JTextField("서울시 ..." ,20));
+		
 		this.setSize(250, 200);
 		this.setVisible(true);
-		ㅇㅇd
+		
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		new TextFieldEx();
 
 	}
 
