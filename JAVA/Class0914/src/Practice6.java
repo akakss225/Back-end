@@ -3,7 +3,7 @@ public class Practice6 {
 
 	public static void main(String[] args) {
 //		5. 다음과 같은 형식으로 출력하시오.이중for문
-//	     *
+//	      *
 //	     ***
 //	    *****
 //	   *******  

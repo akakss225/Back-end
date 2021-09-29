@@ -19,15 +19,31 @@ public class Practice7 {
 			System.out.print("Write a Student's name : ");
 			String name = sc.next();
 			exit.add(name);
+			if(exit.contains("exit")) {
+				System.out.println("EXIT!");
+				break;
+			}
 			System.out.print("Write a Language score: ");
 			int lan = sc.nextInt();
 			exit.add(lan);
+			if(exit.contains("exit")) {
+				System.out.println("EXIT!");
+				break;
+			}
 			System.out.print("Write a English score: ");
 			int eng = sc.nextInt();
 			exit.add(eng);
+			if(exit.contains("exit")) {
+				System.out.println("EXIT!");
+				break;
+			}
 			System.out.print("Write a Math score: ");
 			int math = sc.nextInt();
 			exit.add(math);
+			if(exit.contains("exit")) {
+				System.out.println("EXIT!");
+				break;
+			}
 			double avg = (lan + eng + math) / 3;
 			
 			System.out.println();
@@ -39,9 +55,6 @@ public class Practice7 {
 			System.out.println("average : " + avg);
 			
 			System.out.println("-----------------------------");
-			if(exit.contains("exit")) {
-				break;
-			}
 			
 			}
 		}
