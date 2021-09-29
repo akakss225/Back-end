@@ -24,5 +24,11 @@ public class Grammar {
 //	4. fillArc(int x, int y, int width, int height, int startAngle, int arcAngle))
 //	5. fillPolygon(int[] x, int[] y, int n)
 	
+	스윙에서 이미지를 그리는 두가지 방법
+	1. JLabel을 이용해서 이미지 아이콘을 넣기.
+	2. JPanel에 Graphics를 이용해서 그리기 >> drawImage
+	
+	
+	
 	
 }
