@@ -24,9 +24,16 @@ public class Grammar {
 //	4. fillArc(int x, int y, int width, int height, int startAngle, int arcAngle))
 //	5. fillPolygon(int[] x, int[] y, int n)
 	
-	스윙에서 이미지를 그리는 두가지 방법
-	1. JLabel을 이용해서 이미지 아이콘을 넣기.
-	2. JPanel에 Graphics를 이용해서 그리기 >> drawImage
+//	스윙에서 이미지를 그리는 두가지 방법
+//	1. JLabel을 이용해서 이미지 아이콘을 넣기.
+//	2. JPanel에 Graphics를 이용해서 그리기 >> drawImage
+//	>> ImageIcon icon = new ImageIcon("이미지경로")
+//	>> Image img = icon.getImage();
+//	drawImage(Image img, int x, int y, ImageObserver observer) >> ImageObserver : 이미지가 다 그려졌을 때, 통보를 받는 객체를 지정하는 매개변수
+//	drawImage() >> 원본사이즈 가져오기
+//	drawImage(img, int x, int y, this) >> x, y크기의 이미지
+//	drawImage(img, int x, int y, 100, 100, this) >> 화면에 꽉차게
+	
 	
 	
 	
