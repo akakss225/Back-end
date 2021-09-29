@@ -5,10 +5,10 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class GraphicDrawImageEx2 extends JFrame {
+public class GraphicsDrawImageEx2 extends JFrame {
 	
 	private MyPanel panel = new MyPanel();
-	public GraphicDrawImageEx2() {
+	public GraphicsDrawImageEx2() {
 		this.setTitle("패널 크기에 맞추어 이미지 그리기");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setContentPane(panel);
@@ -29,7 +29,7 @@ public class GraphicDrawImageEx2 extends JFrame {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new GraphicDrawImageEx2();
+		new GraphicsDrawImageEx2();
 	}
 
 }
