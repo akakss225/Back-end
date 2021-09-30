@@ -1,4 +1,3 @@
-ddd
 public class MenuEx {
 
 	public static void main(String[] args) {
