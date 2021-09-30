@@ -15,6 +15,9 @@ public class TimerThread extends Thread {
 			catch(InterruptedException e){
 				return;
 			}
+			if(n == 10) {
+				break;
+			}
 			
 		}
 	}
@@ -22,8 +25,8 @@ public class TimerThread extends Thread {
 
 
 	public static void main(String[] args) {
-		TimerThread th = new TimerThread();
-		th.start();
+		
+
 
 	}
 
