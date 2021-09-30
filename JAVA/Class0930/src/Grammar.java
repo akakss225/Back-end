@@ -1,6 +1,7 @@
 
 public class Grammar {
-
+//	13 장
+	
 //	멀티태스킹(multi tasking) : 동시에 여러 작업을 수행
 //	
 //	멀티 프로세스(multi process) : 프로세스가 여러개 실핼
@@ -54,7 +55,29 @@ public class Grammar {
 //		setCurrentSum(n);
 //	}
 	
+//	wait() : 다른 스레드가 notify를 불러줄 때까지 기다린다.
+//	notify() : wait()를 호출하여 대기중인 스레드를 꺠우고 RUNNABLE상태로 만든다.
+//			   두개 이생의 스레드가 대기중이라도 오직 한 스레드만 깨운다.
+//	notifyAll() : wait()를 호출하여 대기중인 모든 스레드를 깨우고 모두 RUNNABLE상태로 만들어준다.
 	
+//	14 장
+	
+	메뉴 만들기
+	메뉴만들기에 필요한 스윙 컴포넌트
+	1. JMenuBar  : 메뉴바의 기능을 하는 컴포넌트
+	2. JMenu     : 파일, 편집 등 하나의 게뮤 기능을 하는 컴포넌트
+	3. JMenuItem : 파일 메뉴 내에 저장 등 메뉴 아이템 컴포넌트
+	4. 분리선		 : 메뉴 아이템 사이의 분리선
+	
+	메뉴 만드는 과정
+	>> JMenuBar컴포넌트 생성
+	>> JMenu 컴포넌트를 생성하여 Bar에 붙힌다
+	>> JMenuItem 컴포넌트를 생성하여 Menu에 붙힌다
+	>> 여러개의 메뉴와 메뉴 아이템을 생성한다.
+	
+	메뉴 아이템에 Action이벤트 달기
+	ActionListener를 이용
+	각 JMenuItem 컴포넌트에 Aciton 이벤트 리스너 설정
 	
 	
 	

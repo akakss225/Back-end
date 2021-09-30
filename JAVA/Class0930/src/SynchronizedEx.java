@@ -26,6 +26,7 @@ class SharedBoard{
 		return sum;
 	}
 }
+
 class StudentThread extends Thread{
 	private SharedBoard board;
 	public StudentThread(String name, SharedBoard board) {
