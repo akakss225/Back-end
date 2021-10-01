@@ -51,7 +51,6 @@ public class Haksa extends JFrame {
 		this.btnInsert = new JButton("등록");
 		this.add(btnInsert);
 		this.btnInsert.addActionListener(new ActionListener() {
-
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// Oracle과 연동해서 insert하는 작업을 코딩함.
@@ -67,6 +66,7 @@ public class Haksa extends JFrame {
 				else if(txtAdress.getText().equals("")) {
 					JOptionPane.showMessageDialog(null, "주소를 입력해주세요.", "Alert", JOptionPane.ERROR_MESSAGE);
 				}
+				
 			}
 			
 		});
