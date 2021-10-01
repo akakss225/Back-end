@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -64,8 +65,17 @@ public class Haksa extends JFrame {
 		this.btnUpdate = new JButton("수정");
 		this.add(btnUpdate);
 		this.btnDelete = new JButton("삭제");
-		this.add(btnDelete);
+		this.btnDelete.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int result = JOptionPane.showConfirmDialog(null, "삭제하시겠습니까?", "confirm", JOptionPane.YES_NO_OPTION);
+				if(result == JOptionPane.YES_OPTION) {
+					// Oracle연동. 삭제(delete)처리
+					JOptionPane.showMessageDialog(null, "삭제 완료.", "message", JOptionPane.INFORMATION_MESSAGE);
+				}
+		}});
 		
+		this.add(btnDelete);
 		this.setSize(300, 500);
 		this.setVisible(true);
 		

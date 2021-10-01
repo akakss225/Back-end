@@ -32,5 +32,30 @@ public class Grammar {
 	JDialog(Frame owner, String title, boolean modal) >> 생성자에서 마지막값을 true로함.
 	모달리스 다이얼로그 : 다른창과 독립적으로 작동하는 다이얼로그
 	
+	
+	JOptionPane : 간단하고 유용한 팝업 다이얼로그 지원(static)
+	입력 다이얼로그
+	>> String JOptionPane.showInputDialog(String msg);
+	확인 다이얼로그
+	>> int JOptionPane.showConfirmDialog(Component parentComponent, Object msg, String title, int optionType); // 마지막 매개변수는 버튼 종류를 의미
+	메세지 다이얼로그
+	>> void JOptionPane.showMessageDialog(Component parentComponent, Object msg, String title, int optionType); // 마지막 매개변수는 아이콘 모양을 의미
+	
+	
+	파일 다이얼로그 : 파일을 열수있게 하는 다이얼로그 생성
+	JFileChooser : 파일 시스템의 탐색기와 같은 기능을 하는 다이얼로그
+				   사용자에게 파일이나 디렉토리를 쉽게 선택하도록 하는 기능
+	>> 파일 열기 다이얼로그 / 파일 저장 다이얼로그 존재
+	
+   이미지 포맷
+   1. bmp(bitmap)
+   2. gif >> 저해상도. 아이콘. 썸네일 등
+   3. jpg >> 고해상도. 사진 등
+   4. png >> gif와 jpg의 장점을 모아 만듬. 현재 기준값임
+   
+	
+	
+	
+	
 
 }
