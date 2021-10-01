@@ -26,5 +26,11 @@ public class Grammar {
 	dialog.setVisible(true);
 	>> JFrame과 거의 같음
 	
+	
+	모달 다이얼로그와 모달리스 다이얼로그
+	모달 다이얼로그 : 사용자 입력을 독점하는 다이얼로그. 닫기 전에는 다른창에서 작업을 전혀 할 수 없는 다이얼로그
+	JDialog(Frame owner, String title, boolean modal) >> 생성자에서 마지막값을 true로함.
+	모달리스 다이얼로그 : 다른창과 독립적으로 작동하는 다이얼로그
+	
 
 }
