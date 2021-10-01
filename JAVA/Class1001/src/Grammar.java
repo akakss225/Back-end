@@ -1,3 +1,6 @@
+import java.awt.Color;
+
+import javax.swing.JColorChooser;
 import javax.swing.JDialog;
 
 public class Grammar {
@@ -54,7 +57,21 @@ public class Grammar {
    4. png >> gif와 jpg의 장점을 모아 만듬. 현재 기준값임
    
 	
-	
+   컬러 다이얼로그
+   JColorChooser
+   >> Color selectedColor = JColorChooser.showDialog(null, "Color", Color.yellow);  두번째 파라미터 : 창 이름 / 세번쨰 파라미터 : 기본값
+   
+   탭팬
+   JTabbedPane : 여러 패널을 겹치게 하여 공간을 공유하도록 지원하는 팬
+   생성자
+   >> JTabbedPane();
+   >> JTabbedPane(int tabPlacement); tabPlacement : JTabbedPane.TOP / JTabbedPane.BOTTOM / JTabbedPane.LEFT / JTabbedPane.RIGHT
+   
+   int getTabCount() : 탭 팬에 붙은 탭의 개수 리턴
+   int getSeletedIndex() : 현재 선택된 탭
+   void remove(Component comp) / void remove(int index) / void removeTabAt(int index) : 탭 삭제
+   void setTabPlacement(int tabPlacement) : 탭 위치변경
+   
 	
 	
 
