@@ -55,8 +55,18 @@ public class Haksa extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// Oracle과 연동해서 insert하는 작업을 코딩함.
-				System.out.println("등록");
-				
+				if(txtId.getText().equals("")) {
+					JOptionPane.showMessageDialog(null, "학번을 입력해주세요.", "Alert", JOptionPane.ERROR_MESSAGE);
+				}
+				else if(txtName.getText().equals("")) {
+					JOptionPane.showMessageDialog(null, "이름을 입력해주세요.", "Alert", JOptionPane.ERROR_MESSAGE);
+				}
+				else if(txtDepartment.getText().equals("")) {
+					JOptionPane.showMessageDialog(null, "학과를 입력해주세요.", "Alert", JOptionPane.ERROR_MESSAGE);
+				}
+				else if(txtAdress.getText().equals("")) {
+					JOptionPane.showMessageDialog(null, "주소를 입력해주세요.", "Alert", JOptionPane.ERROR_MESSAGE);
+				}
 			}
 			
 		});
