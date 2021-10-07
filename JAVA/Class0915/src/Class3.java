@@ -15,10 +15,10 @@ public class Class3 {
 			
 			try {
 				System.out.println(dividend + " / " + divisor + " = " + dividend/divisor);
-				break;
 			}
 			catch(Exception e){
 				System.out.println("0으로 나눌 수 없습니다. 다시 입력하세요");
+				break;
 			}
 			
 			

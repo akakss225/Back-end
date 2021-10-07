@@ -25,7 +25,7 @@ public class ChatServer extends JFrame implements ActionListener {
 		receiver = new Receiver(); // 클라이언트에서 받은 메세지를 출력할 컴포넌트
 		receiver.setEditable(false); // 편집 불가
 
-		sender = new JTextField(); // 메세지를 입력할 컴포넌트
+		sender = new JTextField(); // 메세지를 입력할 컴포넌트ㅡ
 		sender.addActionListener(this);
 
 		add(new JScrollPane(receiver),BorderLayout.CENTER); // 스크롤바
@@ -90,7 +90,7 @@ public class ChatServer extends JFrame implements ActionListener {
 				sender.setText(null); // 입력창의 문자열 지움
 			} catch (IOException e1) {
 				handleError(e1.getMessage()); 
-			} 
+			}
 		}
 	}
 	

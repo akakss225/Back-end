@@ -28,8 +28,8 @@ public class ChatClient extends JFrame implements ActionListener {
 		c.add(new JScrollPane(receiver),BorderLayout.CENTER); // 스크롤바를 위해  ScrollPane 이용
 		c.add(sender,BorderLayout.SOUTH);
 		
-		setSize(400, 200); // 폭 400  200 �ȼ��� ũ��� ������ ũ�� ����
-		setVisible(true); // �������� ȭ�鿡 ��Ÿ������ ����
+		setSize(400, 200); 
+		setVisible(true); 
 		
 		try {
 			setupConnection();

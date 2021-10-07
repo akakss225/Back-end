@@ -7,7 +7,7 @@ public class Class1 {
 		// dynamic : 실행후에 이루어짐. ( 동적 메소드 )
 		
 		// CLI(Command Line Interface) : 이를테면 터미널.
-		// GUI(Graphic User Interface)
+		// GUI(Graphic User Interface) : 이를테면 eclipse
 		
 		double sum = 0.0;
 		
