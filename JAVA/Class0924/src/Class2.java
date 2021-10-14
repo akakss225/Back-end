@@ -32,7 +32,7 @@ public class Class2 {
 				System.out.println("목록에 없는 이름입니다.");
 			}
 			else {
-				System.out.println("id : " + map.get(name).id + " tel : " + map.get(name).tel);
+				System.out.println("id : " + student.id + " tel : " + student.tel);
 			}
 		}
 		sc.close();
