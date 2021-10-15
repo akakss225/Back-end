@@ -1,22 +1,27 @@
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
+import javax.swing.JTable;
 import javax.swing.JTextField;
-import java.sql.*;
+import javax.swing.table.DefaultTableModel;
 
 public class Haksa extends JFrame {
 	JTextField txtId = null; // 초기에 지정된 레퍼런스가 없다면 null을 넣어놓는게 권장사항이다.
 	JTextField txtName = null;
 	JTextField txtDepartment = null;
 	JTextField txtAdress = null;
-	JTextArea taList = null;
+	
 	
 	// 이러한 구조를 CRUD 라고 함. 게시판 생성의 기본 구조.
 	JButton btnInsert = null; // 등록 Create
@@ -26,6 +31,10 @@ public class Haksa extends JFrame {
 	
 	// 검색버튼
 	JButton btnSearch = null;
+	
+	// table data, model
+	DefaultTableModel model = null; 
+	JTable table = null;
 	
 	public Haksa() {
 		this.setTitle("학사 관리 프로그램");
@@ -49,18 +58,20 @@ public class Haksa extends JFrame {
 					System.out.println("연결완료");
 					
 					Statement stmt = conn.createStatement();
-					
-					
-					// append이기 때문에 초기화해주는 코드가 필요함
-					taList.setText("");
-					
-					taList.append("학번\t이름\t학과\n");
-					taList.append("----------------------------------\n");
-					
 					// 커서
 					ResultSet rs = stmt.executeQuery("select * from student where id = '"+txtId.getText()+"'");
+					
+					
+					// JTable reset
+					model.setNumRows(0);
+					
 					while(rs.next()) {
-						taList.append(rs.getString("id") + "\t" + rs.getString("name") + "\t" + rs.getString("dept") + "\n");
+						String[] row = new String[3];
+						row[0] = rs.getString("id");
+						row[1] = rs.getString("name");
+						row[2] = rs.getString("dept");
+						model.addRow(row);
+						// rs.next()로 한 행을 읽었기 때문에, 밖으로 나가면 eof를 의미. 즉 while문 내부에 있어야함
 						txtId.setText(rs.getString("id"));
 						txtName.setText(rs.getString("name"));
 						txtDepartment.setText(rs.getString("dept"));
@@ -93,9 +104,13 @@ public class Haksa extends JFrame {
 		this.txtAdress = new JTextField(22);
 		this.add(txtAdress);
 		
-		this.taList = new JTextArea(15, 23); // 줄의 갯수, 글자의 갯수
-		this.add(new JScrollPane(taList));
-		
+		String[] colname = {"학번", "이름", "학과"};
+		this.model = new DefaultTableModel(colname, 0);
+		this.table = new JTable(model); // model - table binding
+		table.setPreferredScrollableViewportSize(new Dimension(250, 270)); // table size
+		this.add(table);
+		JScrollPane sp = new JScrollPane(table);
+		this.add(sp);
 		
 		this.btnInsert = new JButton("등록");
 		this.add(btnInsert);
@@ -123,18 +138,19 @@ public class Haksa extends JFrame {
 						
 						// insert 문 자바에서 실행
 						stmt.executeUpdate("insert into student values('"+txtId.getText()+"', '"+txtName.getText()+"', '"+txtDepartment.getText()+"')");
-						
-						
-						// append이기 때문에 초기화해주는 코드가 필요함
-						taList.setText("");
-						
-						taList.append("학번\t이름\t학과\n");
-						taList.append("----------------------------------\n");
-						
 						// 커서
 						ResultSet rs = stmt.executeQuery("select * from student");
+						
+						
+						// JTable reset
+						model.setNumRows(0);
+						// 목록 출력해주는 구문
 						while(rs.next()) {
-							taList.append(rs.getString("id") + "\t" + rs.getString("name") + "\t" + rs.getString("dept") + "\n");
+							String[] row = new String[3];
+							row[0] = rs.getString("id");
+							row[1] = rs.getString("name");
+							row[2] = rs.getString("dept");
+							model.addRow(row);
 						}
 						// close를 할때는 만든것의 역순으로 해야한다. >> 연관되어있기 때문
 						rs.close();
@@ -166,28 +182,20 @@ public class Haksa extends JFrame {
 					System.out.println("연결완료");
 					
 					Statement stmt = conn.createStatement();
-					
-					// insert 문 자바에서 실행
-					// stmt.executeUpdate("insert into student values('1234567', '왕건', '국문학과')");
-					
-					// update 문 자바에서 실행
-					// stmt.executeUpdate("update student set name = '홍길동' where id = '1234567'");
-
-					// delete 문 자바에서 실행
-					// stmt.executeUpdate("delete from student where id = '1234567'");
-					
-					
-					// append이기 때문에 초기화해주는 코드가 필요함
-					taList.setText("");
-					
-					taList.append("학번\t이름\t학과\n");
-					taList.append("----------------------------------\n");
-					
 					// 커서
 					ResultSet rs = stmt.executeQuery("select * from student");
+
+					// JTable reset
+					model.setNumRows(0);
+					// 목록 출력해주는 구문
 					while(rs.next()) {
-						taList.append(rs.getString("id") + "\t" + rs.getString("name") + "\t" + rs.getString("dept") + "\n");
+						String[] row = new String[3];
+						row[0] = rs.getString("id");
+						row[1] = rs.getString("name");
+						row[2] = rs.getString("dept");
+						model.addRow(row);
 					}
+					
 					// close를 할때는 만든것의 역순으로 해야한다. >> 연관되어있기 때문
 					rs.close();
 					stmt.close();
@@ -222,17 +230,17 @@ public class Haksa extends JFrame {
 					// update 문 자바에서 실행
 					stmt.executeUpdate("update student set name = '"+txtName.getText()+"', dept='"+txtDepartment.getText()+"'where id = '"+txtId.getText()+"'");
 
-					
-					// append이기 때문에 초기화해주는 코드가 필요함
-					taList.setText("");
-					
-					taList.append("학번\t이름\t학과\n");
-					taList.append("----------------------------------\n");
-					
 					// 커서
 					ResultSet rs = stmt.executeQuery("select * from student where id='"+txtId.getText()+"'");
-					while(rs.next()) {
-						taList.append(rs.getString("id") + "\t" + rs.getString("name") + "\t" + rs.getString("dept") + "\n");
+					
+					// JTable reset
+					model.setNumRows(0);
+					while(rs.next()) {				
+						String[] row = new String[3];
+						row[0] = rs.getString("id");
+						row[1] = rs.getString("name");
+						row[2] = rs.getString("dept");
+						model.addRow(row);
 					}
 					txtId.setText("");
 					txtName.setText("");
@@ -272,16 +280,17 @@ public class Haksa extends JFrame {
 						// delete 문 자바에서 실행
 						stmt.executeUpdate("delete from student where id = '"+txtId.getText()+"'");
 						
-						// append이기 때문에 초기화해주는 코드가 필요함
-						taList.setText("");
-						
-						taList.append("학번\t이름\t학과\n");
-						taList.append("----------------------------------\n");
-						
 						// 커서
 						ResultSet rs = stmt.executeQuery("select * from student");
+						
+						// JTable reset
+						model.setNumRows(0);
 						while(rs.next()) {
-							taList.append(rs.getString("id") + "\t" + rs.getString("name") + "\t" + rs.getString("dept") + "\n");
+							String[] row = new String[3];
+							row[0] = rs.getString("id");
+							row[1] = rs.getString("name");
+							row[2] = rs.getString("dept");
+							model.addRow(row);
 						}
 						txtId.setText("");
 						txtName.setText("");

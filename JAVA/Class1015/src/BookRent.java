@@ -82,6 +82,7 @@ public class BookRent extends JFrame {
 	    table = new JTable(model); // model - table binding작업
 	    table.setPreferredScrollableViewportSize(new Dimension(470,200)); // table size
 	    add(table);
+	    
 	    JScrollPane sp = new JScrollPane(table); // table inner scroll
 	    sp.setBounds(10, 40, 460, 250);
 	    add(sp);  
