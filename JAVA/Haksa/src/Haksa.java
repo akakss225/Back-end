@@ -22,7 +22,7 @@ public class Haksa extends JFrame {
 	JTextField txtId = null; // 초기에 지정된 레퍼런스가 없다면 null을 넣어놓는게 권장사항이다.
 	JTextField txtName = null;
 	JTextField txtDepartment = null;
-	JTextField txtAdress = null;
+	JTextField txtAddress = null;
 	
 	
 	// 이러한 구조를 CRUD 라고 함. 게시판 생성의 기본 구조.
@@ -68,15 +68,17 @@ public class Haksa extends JFrame {
 					model.setNumRows(0);
 					
 					while(rs.next()) {
-						String[] row = new String[3];
+						String[] row = new String[4];
 						row[0] = rs.getString("id");
 						row[1] = rs.getString("name");
 						row[2] = rs.getString("dept");
+						row[3] = rs.getString("address");
 						model.addRow(row);
 						// rs.next()로 한 행을 읽었기 때문에, 밖으로 나가면 eof를 의미. 즉 while문 내부에 있어야함
 						txtId.setText(rs.getString("id"));
 						txtName.setText(rs.getString("name"));
 						txtDepartment.setText(rs.getString("dept"));
+						txtAddress.setText(rs.getString("adress"));
 					}
 					
 					// close를 할때는 만든것의 역순으로 해야한다. >> 연관되어있기 때문
@@ -103,10 +105,10 @@ public class Haksa extends JFrame {
 		this.add(txtDepartment);
 		
 		this.add(new JLabel("주소"));
-		this.txtAdress = new JTextField(22);
-		this.add(txtAdress);
+		this.txtAddress = new JTextField(22);
+		this.add(txtAddress);
 		
-		String[] colname = {"학번", "이름", "학과"};
+		String[] colname = {"학번", "이름", "학과", "주소"};
 		this.model = new DefaultTableModel(colname, 0);
 		this.table = new JTable(model); // model - table binding
 		table.setPreferredScrollableViewportSize(new Dimension(250, 270)); // table size
@@ -124,6 +126,7 @@ public class Haksa extends JFrame {
 				txtId.setText((String)model.getValueAt(table.getSelectedRow() /* 현재 선택된행 */,0)); // 학번
 				txtName.setText((String)model.getValueAt(table.getSelectedRow() /* 현재 선택된행 */,1)); // 이름
 				txtDepartment.setText((String)model.getValueAt(table.getSelectedRow() /* 현재 선택된행 */,2)); // 학과
+				txtAddress.setText((String)model.getValueAt(table.getSelectedRow() /* 현재 선택된행 */,3)); // 학과
 			}
 			@Override
 			public void mousePressed(MouseEvent e) {}
@@ -150,6 +153,9 @@ public class Haksa extends JFrame {
 				else if(txtDepartment.getText().equals("")) {
 					JOptionPane.showMessageDialog(null, "학과를 입력해주세요.", "Alert", JOptionPane.ERROR_MESSAGE);
 				}
+				else if(txtAddress.getText().equals("")) {
+					JOptionPane.showMessageDialog(null, "주소를 입력해주세요.", "Alert", JOptionPane.ERROR_MESSAGE);
+				}
 				else {
 					try {
 						// MySQL의 포트넘버는 3306이며, 뒤에는 스키마name을 써줌. 그리고 순서대로 userName, server passward를 작성해줌.
@@ -160,7 +166,7 @@ public class Haksa extends JFrame {
 						Statement stmt = conn.createStatement();
 						
 						// insert 문 자바에서 실행
-						stmt.executeUpdate("insert into student values('"+txtId.getText()+"', '"+txtName.getText()+"', '"+txtDepartment.getText()+"')");
+						stmt.executeUpdate("insert into student values('"+txtId.getText()+"', '"+txtName.getText()+"', '"+txtDepartment.getText()+"', '"+txtAddress.getText()+"')");
 						// 커서
 						ResultSet rs = stmt.executeQuery("select * from student");
 						
@@ -169,10 +175,11 @@ public class Haksa extends JFrame {
 						model.setNumRows(0);
 						// 목록 출력해주는 구문
 						while(rs.next()) {
-							String[] row = new String[3];
+							String[] row = new String[4];
 							row[0] = rs.getString("id");
 							row[1] = rs.getString("name");
 							row[2] = rs.getString("dept");
+							row[3] = rs.getString("address");
 							model.addRow(row);
 						}
 						// close를 할때는 만든것의 역순으로 해야한다. >> 연관되어있기 때문
@@ -212,12 +219,17 @@ public class Haksa extends JFrame {
 					model.setNumRows(0);
 					// 목록 출력해주는 구문
 					while(rs.next()) {
-						String[] row = new String[3];
+						String[] row = new String[4];
 						row[0] = rs.getString("id");
 						row[1] = rs.getString("name");
 						row[2] = rs.getString("dept");
+						row[3] = rs.getString("address");
 						model.addRow(row);
 					}
+					txtId.setText("");
+					txtName.setText("");
+					txtDepartment.setText("");
+					txtAddress.setText("");
 					
 					// close를 할때는 만든것의 역순으로 해야한다. >> 연관되어있기 때문
 					rs.close();
@@ -251,7 +263,7 @@ public class Haksa extends JFrame {
 					Statement stmt = conn.createStatement();
 					
 					// update 문 자바에서 실행
-					stmt.executeUpdate("update student set name = '"+txtName.getText()+"', dept='"+txtDepartment.getText()+"'where id = '"+txtId.getText()+"'");
+					stmt.executeUpdate("update student set name = '"+txtName.getText()+"', dept='"+txtDepartment.getText()+"', address='"+txtAddress.getText()+"' where id = '"+txtId.getText()+"'");
 
 					// 커서
 					ResultSet rs = stmt.executeQuery("select * from student where id='"+txtId.getText()+"'");
@@ -259,15 +271,17 @@ public class Haksa extends JFrame {
 					// JTable reset
 					model.setNumRows(0);
 					while(rs.next()) {				
-						String[] row = new String[3];
+						String[] row = new String[4];
 						row[0] = rs.getString("id");
 						row[1] = rs.getString("name");
 						row[2] = rs.getString("dept");
+						row[3] = rs.getString("address");
 						model.addRow(row);
 					}
 					txtId.setText("");
 					txtName.setText("");
 					txtDepartment.setText("");
+					txtAddress.setText("");
 					
 					// close를 할때는 만든것의 역순으로 해야한다. >> 연관되어있기 때문
 					rs.close();
@@ -309,15 +323,17 @@ public class Haksa extends JFrame {
 						// JTable reset
 						model.setNumRows(0);
 						while(rs.next()) {
-							String[] row = new String[3];
+							String[] row = new String[4];
 							row[0] = rs.getString("id");
 							row[1] = rs.getString("name");
 							row[2] = rs.getString("dept");
+							row[3] = rs.getString("address");
 							model.addRow(row);
 						}
 						txtId.setText("");
 						txtName.setText("");
 						txtDepartment.setText("");
+						txtAddress.setText("");
 						
 						
 						// close를 할때는 만든것의 역순으로 해야한다. >> 연관되어있기 때문
