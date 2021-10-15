@@ -2,6 +2,8 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -111,6 +113,27 @@ public class Haksa extends JFrame {
 		this.add(table);
 		JScrollPane sp = new JScrollPane(table);
 		this.add(sp);
+		
+		this.table.addMouseListener(new MouseListener() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				// 이벤트가 일어난 장소는 Table임.
+				table = (JTable)e.getComponent(); // return type = component 이다. 따라서 cast함수로 Table 데이터로 바꿔준다.
+				model = (DefaultTableModel)table.getModel(); // table의 경우 데이터타입이 JTable이기 때문에 casting
+				// parameter 가 행, 열이다.
+				txtId.setText((String)model.getValueAt(table.getSelectedRow() /* 현재 선택된행 */,0)); // 학번
+				txtName.setText((String)model.getValueAt(table.getSelectedRow() /* 현재 선택된행 */,1)); // 이름
+				txtDepartment.setText((String)model.getValueAt(table.getSelectedRow() /* 현재 선택된행 */,2)); // 학과
+			}
+			@Override
+			public void mousePressed(MouseEvent e) {}
+			@Override
+			public void mouseReleased(MouseEvent e) {}
+			@Override
+			public void mouseEntered(MouseEvent e) {}
+			@Override
+			public void mouseExited(MouseEvent e) {}
+			});
 		
 		this.btnInsert = new JButton("등록");
 		this.add(btnInsert);
