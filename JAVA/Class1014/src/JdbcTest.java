@@ -8,6 +8,7 @@ public class JdbcTest {
 
 	public static void main(String[] args) {
 		try {
+			// MySQL의 포트넘버는 3306이며, 뒤에는 스키마name을 써줌. 그리고 순서대로 userName, server passward를 작성해줌.
 			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/workbench","root","Sumin298365!");
 			System.out.println("연결완료");
 			
