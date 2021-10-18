@@ -26,7 +26,8 @@ public class TimerThread extends Thread {
 
 	public static void main(String[] args) {
 		
-
+		TimerThread tt = new TimerThread();
+		tt.run();
 
 	}
 

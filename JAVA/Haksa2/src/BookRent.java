@@ -9,11 +9,12 @@ import java.sql.Statement;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-public class BookRent extends JFrame {
+public class BookRent extends JPanel {
 	DefaultTableModel model = null; // table data
 	JTable table = null;
 	Connection conn = null;
@@ -38,8 +39,6 @@ public class BookRent extends JFrame {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		setTitle("학생관리");
-	    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//x버튼 누르면 프로그램 종료
 	    
 	    setLayout(null);//레이아웃설정. 레이아웃 사용 안함.
 	    
