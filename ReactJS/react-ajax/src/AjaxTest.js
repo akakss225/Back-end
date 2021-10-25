@@ -10,7 +10,7 @@ class AjaxTest extends React.Component{
         };
     }
 
-    componentDidUpdate(){
+    componentDidMount(){
         fetch("http://akakss225.ivyro.net/ajaxDB2.php")
         .then(res => res.json())
         .then(
