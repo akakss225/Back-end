@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import AjaxTest from './AjaxTest';
+import AjaxTest3 from './AjaxTest3';
 
 function App() {
   return (
@@ -18,8 +18,8 @@ function App() {
         >
           Learn React
         </a>
+        <AjaxTest3 />
       </header>
-      <AjaxTest />
     </div>
   );
 }
