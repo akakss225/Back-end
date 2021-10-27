@@ -12,6 +12,9 @@
 		아이디 : <input type="text" name="id"><br>
 		나 이 : <input type="text" name="age"><br>
 		<input type="submit" value="전송" onClick="return check()">
+		<input type="button" value="전송" onClick="check2()">
+		<button onClick="return check()">전송</button>
+		<button type="button" onClick="check2()">전송</button>
 	</form>
 </body>
 </html>
