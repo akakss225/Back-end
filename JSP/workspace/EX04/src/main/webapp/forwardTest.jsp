@@ -6,7 +6,8 @@
 	if(age <= 19){
 %>
 	<script type="text/javascript">
-		alert("19세 이하는 입장 불가능");    
+		alert("19세 이하는 입장 불가능");
+		history.go(-1);
 	</script>
 <%
 	}

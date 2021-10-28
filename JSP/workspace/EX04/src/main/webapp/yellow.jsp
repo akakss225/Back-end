@@ -6,11 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-	나이를 입력하세요<br>
-	<form action="forwardTest.jsp">
-		<input type="text" name="age">
-		<input type="submit" value="입장">
-	</form>
+<body bgcolor="yellow">
+	yellow.jsp
 </body>
 </html>
