@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	String id = "pinksung";
+/* 	String id = "pinksung";
 	String pwd = "1234";
 	String name = "성윤정";
 	
@@ -11,5 +11,8 @@
 	}
 	else{
 		response.sendRedirect("loginForm.jsp");
-	}
+	} */
 %>
+
+<div>아이디 : ${param.id }</div>
+<div>비밀번호 : ${param["pwd"] }</div>
