@@ -24,7 +24,7 @@ public class MemberBean {
 	}
 	@Override
 	public String toString() {
-		return "MemberBena [name=" + name + ", userid=" + userid + "]";
+		return "MemberBean [name=" + name + ", userid=" + userid + "]";
 	}
 	
 	

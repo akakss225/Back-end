@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +14,7 @@
 	<%
 		String input = null;
 	%>
+	<c:set var="input" value="<%=input %>"/>
 	<div>${empty input}</div>
 	<!-- el 은null을 출력할 때 아무것도 출력을 시키지 않는다. -->
 	<div>${input}</div>
