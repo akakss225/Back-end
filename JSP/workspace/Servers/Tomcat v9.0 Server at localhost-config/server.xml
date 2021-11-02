@@ -167,7 +167,7 @@
       <Context docBase="EX08" path="/EX08" reloadable="true" source="org.eclipse.jst.jee.server:EX08"/>
       <Context docBase="Practice03" path="/Practice03" reloadable="true" source="org.eclipse.jst.jee.server:Practice03"/>
       <Context docBase="EX09" path="/EX09" reloadable="true" source="org.eclipse.jst.jee.server:EX09">
-      	<Resource name="jdbc/TestDB" 
+      	<Resource name="jdbc/MyDB" 
       			  auth="Container" 
       			  type="javax.sql.DataSource"
                	  maxTotal="100" 

@@ -18,7 +18,7 @@ public class MemberDAO {
 	public Connection getConnection() throws Exception{
 		Connection conn = null;
 		Context init = new InitialContext();
-		DataSource ds = (DataSource)init.lookup("java:comp/env/jdbc/TestDB");
+		DataSource ds = (DataSource)init.lookup("java:comp/env/jdbc/MyDB");
 		conn = ds.getConnection();
 		return conn;
 	}
