@@ -20,13 +20,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-	<script>
-		var emailRule = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-		if(!emailRule.test($("input[id='email']").val())) {            
-		            alert("이메일 형식을 맞춰주세요.");
-		            return false;
-		}
-	</script>
 	<%
 	request.setCharacterEncoding("UTF-8");
 	String email = request.getParameter("email");
@@ -34,7 +27,7 @@
 	String pwd2 = request.getParameter("pwd2");
 	String name = request.getParameter("name");
 	String phone = request.getParameter("phone");
-	if(pwd1 != pwd2){
+	if(!pwd1.equals(pwd2)){
 		%>
 			<script>
 				alert("입력하신 비밀번호가 다릅니다. 다시 입력해주세요.");

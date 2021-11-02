@@ -64,7 +64,7 @@ a {
 </style>
 </head>
 <body>
-	<form method="post" action="signUp.jsp">
+	<form method="post" action="signUp.jsp" name="frm">
 	  <div class="container">
 	    <h1>Sign Up For Our HomePage!</h1>
 	    <p>Please fill in this form to create an account.</p>
@@ -86,12 +86,21 @@ a {
 	    <input type="text" placeholder="Phone Number" name="phone" id="phone" required>
 	
 	    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-	    <button type="submit" class="register">Register</button>
+	    <button type="submit" class="register" onclick="return loginCheck()">Register</button>
 	  </div>
 	
 	  <div class="container signin">
 	    <p>Already have an account? <a href="#">Sign in</a>.</p>
 	  </div>
 	</form>
+	<script>
+		function loginCheck(){
+			var emailRule = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+			if(!emailRule.test(document.frm.email.value)) {            
+			            alert("이메일 형식을 맞춰주세요.");
+			            return false;
+			}
+		}
+	</script>
 </body>
 </html>
