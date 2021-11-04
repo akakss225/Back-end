@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="css/shopping.css">
-<script type="text/javascript" src="script.product.js"></script>
+<script type="text/javascript" src="script/product.js"></script>
 </head>
 <body>
 	<div id="wrap" align="center">
