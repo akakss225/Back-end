@@ -22,7 +22,7 @@ public class DBManager {
 		}
 		return conn;
 	}
-	
+	// select을 위한 close >> Statement를 parameter로 받는 이유는 PreparedStatement는 Statement를 상속받기 때문. 즉 upcasting기법 이용
 	public static void close(Connection conn, Statement stmt, ResultSet rs) {
 		try {
 			rs.close();
@@ -33,6 +33,7 @@ public class DBManager {
 			e.printStackTrace();
 		}
 	}
+	// insert, update, delete를 위한 close
 	public static void close(Connection conn, Statement stmt) {
 		try {
 			stmt.close();

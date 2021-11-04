@@ -12,6 +12,6 @@
 		제 &nbsp; 목 : <input type="text" name="title"><br>
 		파일 지정하기 : <input type="file" name="uploadFile"><br>
 		<input type="submit" value="전송">
-	</form> 
+	</form>
 </body>
 </html>
