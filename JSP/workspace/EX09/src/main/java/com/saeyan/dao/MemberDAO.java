@@ -170,7 +170,7 @@ public class MemberDAO {
 	
 	public int updateMember(MemberVO mVo) {
 		int result = -1;
-		String sql = "update member set pwd=?, email=?, phone=?, admin=? where userid=?";
+		String sql = "update member set pwd=?, email=?, phone=?, admin=?, name=? where userid=?";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		
@@ -181,7 +181,8 @@ public class MemberDAO {
 			pstmt.setString(2, mVo.getEmail());
 			pstmt.setString(3, mVo.getPhone());
 			pstmt.setInt(4, mVo.getAdmin());
-			pstmt.setString(5, mVo.getUserid());
+			pstmt.setString(5, mVo.getName());
+			pstmt.setString(6, mVo.getUserid());
 			result = pstmt.executeUpdate(); // executeUpdate의 경우 변경된 행의 수를 return함.
 		}
 		catch(Exception e) {

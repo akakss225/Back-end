@@ -14,7 +14,7 @@
 		<table>
 			<tr>
 				<td>이름 </td>
-				<td><input type="text" name="name" size="20" value="${mVo.name }" readonly></td>
+				<td><input type="text" name="name" size="20" value="${mVo.name }">*</td>
 			</tr>
 			<tr>
 				<td>아이디</td>

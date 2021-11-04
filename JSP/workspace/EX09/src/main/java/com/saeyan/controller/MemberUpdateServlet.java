@@ -51,6 +51,7 @@ public class MemberUpdateServlet extends HttpServlet {
 		String pwd = request.getParameter("pwd");
 		String email = request.getParameter("email");
 		String phone = request.getParameter("phone");
+		String name = request.getParameter("name");
 		String admin = request.getParameter("admin");
 		// 회원 정보를 저장할 객체 생성
 		MemberVO mVo = new MemberVO();
@@ -58,10 +59,11 @@ public class MemberUpdateServlet extends HttpServlet {
 		mVo.setPwd(pwd);
 		mVo.setEmail(email);
 		mVo.setPhone(phone);
+		mVo.setName(name);
 		mVo.setAdmin(Integer.parseInt(admin));
 		MemberDAO mDao = MemberDAO.getInstance();
 		mDao.updateMember(mVo);
-		response.sendRedirect("login.do");
+		response.sendRedirect("logout.do");
 		
 	}
 
