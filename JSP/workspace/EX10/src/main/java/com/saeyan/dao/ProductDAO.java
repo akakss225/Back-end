@@ -73,20 +73,27 @@ public class ProductDAO {
 		}
 	}
 	
-	// 상품 수정
+	// c r Update d
 	public ProductVO selectProductByCode(String code) {
 		String sql = "select * from product where code=?";
+		
 		ProductVO pVo = null;
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
-			pVo = new ProductVO();
-			pVo.setCode(rs.getInt("code"));
-			pVo.setName(rs.getString("name"));
-			pVo.setPrice(rs.getInt("price"));
-			pVo.setPictureUrl(rs.getString("pictureUrl"));
-			pVo.setDescription(rs.getString("description"));
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, code);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				pVo = new ProductVO();
+				pVo.setCode(rs.getInt("code"));
+				pVo.setName(rs.getString("name"));
+				pVo.setPrice(rs.getInt("price"));
+				pVo.setPictureUrl(rs.getString("pictureUrl"));
+				pVo.setDescription(rs.getString("description"));
+			}
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -119,6 +126,25 @@ public class ProductDAO {
 			DBManager.close(conn, pstmt);
 		}
 		
+	}
+	
+	// c r u Delete
+	public void deleteProduct(String code) {
+		String sql = "delete from product where code=?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, code);
+			pstmt.executeUpdate();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			DBManager.close(conn, pstmt);
+		}
 	}
 	
 }
