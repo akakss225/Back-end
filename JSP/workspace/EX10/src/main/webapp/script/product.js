@@ -17,3 +17,13 @@ function productCheck(){
 	}
 	return true;
 }
+
+function checkDelete(){
+	var check = confirm("삭제하시겠습니까?");
+	if(check == true){
+		return true;
+	}
+	else{
+		return false;	
+	}
+}

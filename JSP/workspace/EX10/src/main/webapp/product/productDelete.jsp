@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="css/shopping.css">
+<script type="text/javascript" src="script/product.js"></script>
 </head>
 <body>
 	<div id="wrap" align="center">
@@ -52,7 +53,7 @@
 			</table>
 			<br>
 			<input type="hidden" value="${product.code }" name="code">
-			<input type="submit" value="삭제">
+			<input type="submit" value="삭제" onclick="return checkDelete()">
 			<input type="button" value="목록" onclick="location.href='productList.do'">
 		</form>
 	</div>

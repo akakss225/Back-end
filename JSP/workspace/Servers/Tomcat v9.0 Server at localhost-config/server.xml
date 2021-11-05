@@ -171,7 +171,11 @@
       </Context>
       <Context docBase="EX10" path="/EX10" reloadable="true" source="org.eclipse.jst.jee.server:EX10">
       	<Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxIdle="30" maxTotal="100" maxWaitMillis="10000" name="jdbc/MyDB" password="Sumin298365!" type="javax.sql.DataSource" url="jdbc:mysql://127.0.0.1:3306/java_jdbc" username="root"/>
-      </Context></Host>
+      </Context>
+      <Context docBase="EX11" path="/EX11" reloadable="true" source="org.eclipse.jst.jee.server:EX11">
+      	<Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxIdle="30" maxTotal="100" maxWaitMillis="10000" name="jdbc/MyDB" password="Sumin298365!" type="javax.sql.DataSource" url="jdbc:mysql://127.0.0.1:3306/java_jdbc" username="root"/>
+      </Context>
+      </Host>
     </Engine>
   </Service>
 </Server>
