@@ -15,9 +15,5 @@ function productCheck(){
 		frm.price.select();
 		return false;
 	}
-	if(document.frm.pictureUrl.value.length == 0){
-		alert("사진을 선택해주세요.");
-		return false;
-	}
 	return true;
 }

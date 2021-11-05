@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="css/shooping.css">
+<link rel="stylesheet" type="text/css" href="css/shopping.css">
 <script type="text/javascript" src="script/product.js"></script>
 </head>
 <body>
@@ -30,26 +30,26 @@
 					<td>
 						<table>
 							<tr>
-								<th style="width: 80px">상품명</th>
+								<th style="width: 80px"> 상품명 </th>
 								<td>
 									<input type="text" name="name" value="${product.name }" size="80">
 								</td>
 							</tr>
 							<tr>
-								<th>가 격</th>
+								<th> 가 격 </th>
 								<td>
 									<input type="text" name="price" value="${product.price }"> 원
 								</td>
 							</tr>
 							<tr>
-								<th>사 진</th>
+								<th> 사 진 </th>
 								<td>
 									<input type="file" name="pictureUrl"><br>
 									(주의사항 : 이미지를 변경하고자 할 때만 선택하시오)
 								</td>
 							</tr>
 							<tr>
-								<th>설 명</th>
+								<th> 설 명 </th>
 								<td>
 									<textarea cols="90" rows="10" name="description">${product.description }</textarea>
 								</td>
