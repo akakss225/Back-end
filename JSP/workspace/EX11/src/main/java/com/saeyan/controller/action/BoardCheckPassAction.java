@@ -1,7 +1,6 @@
 package com.saeyan.controller.action;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,25 +10,28 @@ import javax.servlet.http.HttpServletResponse;
 import com.saeyan.dao.BoardDAO;
 import com.saeyan.dto.BoardVO;
 
-public class BoardListAction implements Action {
+public class BoardCheckPassAction implements Action {
 
+	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int pageno;
-		if(request.getParameter("pageno")!=null){
-			pageno=Integer.parseInt(request.getParameter("pageno"));
-			System.out.println(pageno);
-		}else{
-			pageno=1;
-		}
-				
-		String url = "/board/boardList.jsp";
+		String url = null;
+		
+		String num = request.getParameter("num");
+		String pass = request.getParameter("pass");
+		
 		BoardDAO bDao = BoardDAO.getInstance();
-		List<BoardVO> boardList = bDao.selectAllBoard(pageno);
-		int recordCount=bDao.selectCountBoard();
-		request.setAttribute("boardList", boardList);
-		request.setAttribute("recordCount", recordCount);
+		BoardVO bVo = bDao.selectOneBoardByNum(num);
+		
+		if(bVo.getPass().equals(pass)) {
+			url = "/board/checkSuccess.jsp";
+		}
+		else {
+			url = "/board/boardCheckPass.jsp";
+			request.setAttribute("message", "비밀번호가 틀렸습니다.");
+		}
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
+		
 	}
-	
+
 }
