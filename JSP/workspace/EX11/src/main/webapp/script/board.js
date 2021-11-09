@@ -30,3 +30,22 @@ function passCheck(){
 	}
 	return true;
 }
+
+function replyCheck(){
+	if(document.frm.name.value.length==0){
+		alert("이름을 입력하세요");
+		document.frm.name.focus();
+		return false;
+	}
+	if(document.frm.password.value.length==0){
+		alert("비밀번호를 입력하세요");
+		document.frm.password.focus();
+		return false;
+	}
+	if(document.frm.content.value.length==0){
+		alert("내용을 입력하세요");
+		document.frm.content.focus();
+		return false;
+	}
+	return true;
+}

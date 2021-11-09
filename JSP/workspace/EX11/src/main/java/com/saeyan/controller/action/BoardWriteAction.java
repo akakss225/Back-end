@@ -25,7 +25,8 @@ public class BoardWriteAction implements Action {
 		bDao.insertBoard(bVo);
 		
 		// 생성자 호출 >> response.sendRedirect("BoardServlet?command=board_list");와 같은 명령어임
-		new BoardListAction().execute(request, response);
+		// new BoardListAction().execute(request, response);
+		response.sendRedirect("BoardServlet?command=board_list");
 		
 	}
 
