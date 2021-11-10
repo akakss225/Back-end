@@ -15,6 +15,10 @@
 		alert("삭제되었습니다.")
 		window.opener.parent.location.href="BoardServlet?command=board_delete&num=${param.num}";
 	}
+	else if(window.name == "reply_delete"){
+		alert("댓글을 삭제하였습니다.")
+		window.opner.parent.location.href="BoardServlet?command=reply_delete&num=${param.num}";
+	}
 	wndow.close();
 </script>
 </body>

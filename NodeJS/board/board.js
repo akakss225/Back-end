@@ -18,10 +18,12 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use('/css',express.static('css'));//css폴더 사용
 app.use(bodyParser.urlencoded({extended:false}));
+
 // 서버를 실행합니다.
 app.listen(52273, function () {
     console.log('server running at http://127.0.0.1:52273');
 });
+
 //글목록
 app.get('/', function (request, response) {
     // 파일을 읽습니다.
@@ -35,6 +37,7 @@ app.get('/', function (request, response) {
         });
     });
 });
+
 //글등록화면
 app.get('/insert', function (request, response) {
     // 파일을 읽습니다.
@@ -43,6 +46,7 @@ app.get('/insert', function (request, response) {
         response.send(data);
     });
 });
+
 //글등록처리
 app.post('/insert', function (request, response) {
     // 변수를 선언합니다.
@@ -66,6 +70,7 @@ app.post('/insert', function (request, response) {
         response.redirect('/');//목록으로 이동.
     });
 });
+
 // 글상세보기.댓글목록.
 app.get('/content/:id', function (request, response) {
     // 파일을 읽습니다.
@@ -111,6 +116,7 @@ app.get('/edit/:id', function (request, response) {
         });
     });
 });
+
 //edit form에 데이터입력후 submit을 클릭했을 때
 app.post('/edit/:id', function (request, response) {
     // 변수를 선언합니다.

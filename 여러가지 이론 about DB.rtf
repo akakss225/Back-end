@@ -1,7 +1,9 @@
 {\rtf1\ansi\ansicpg949\cocoartf2580
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset129 AppleSDGothicNeo-Regular;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset129 AppleSDGothicNeo-Regular;\f1\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red191\green131\blue194;\red33\green39\blue42;\red87\green219\blue82;
+\red88\green196\blue193;\red234\green121\blue57;\red193\green193\blue193;\red109\green188\blue135;}
+{\*\expandedcolortbl;;\cssrgb\c80000\c60000\c80392;\cssrgb\c17255\c20392\c21569;\cssrgb\c39216\c87059\c39216;
+\cssrgb\c40392\c80392\c80000;\cssrgb\c94118\c55294\c28627;\cssrgb\c80000\c80000\c80000;\cssrgb\c49412\c77647\c60000;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
@@ -301,11 +303,187 @@ Apache web server + tomcat(WAS) + JSP \'bf\'f8\'b7\'a1\'b4\'c2 \'c0\'cc\'b7\'af\
 \
 *** \'bf\'ee\'bf\'b5\'bc\'ad\'b9\'f6\'b4\'c2 \'c1\'df\'c1\'f6\'c7\'d8\'be\'df \'c3\'e6\'b5\'b9\'c0\'cc \'be\'c8\'b3\'b2 ! ***\
 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\
+JSP MVC \'c6\'d0\'c5\'cf\
+\
+1. Model - \'b5\'a5\'c0\'cc\'c5\'cd\
+>> Class\'b7\'ce \'b8\'b8\'b5\'eb >> \'bb\'e7\'bd\'c7\'bb\'f3 Java\'c4\'da\'b5\'e5\'b7\'ce \'c0\'db\'bc\'ba\'c7\'d1\'b4\'d9.\
+\
+2. View - UI\
+>> JSP\'b0\'a1 \'b4\'e3\'b4\'e7\'c7\'d4 >> \'bd\'c7\'c1\'a6\'b7\'ce JSP \'c4\'da\'b5\'e5\'b8\'a6 \'c8\'ae\'c0\'ce\'c7\'cf\'b8\'e9 Java\'c4\'da\'b5\'e5\'b0\'a1 \'b5\'e9\'be\'ee\'b0\'a1\'c1\'f6 \'be\'ca\'b5\'b5\'b7\'cf \'b3\'eb\'b7\'c2\'c7\'d1\'b4\'d9.\
+\
+3. Controller - \'b7\'ce\'c1\'f7\
+>> Servlet\'c0\'cc \'b4\'e3\'b4\'e7\'c7\'d4 >> Java\'c4\'da\'b5\'e5\'b7\'ce \'c0\'db\'bc\'ba\'c7\'cf\'b5\'b5\'b7\'cf \'c7\'d1\'b4\'d9.\
 \
 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\
+form\'c5\'c2\'b1\'d7\'bf\'a1\'bc\'ad \'c0\'fc\'bc\'db\'c0\'bb \'b9\'e6\'c1\'f6\'c7\'cf\'b4\'c2 \'b9\'e6\'b9\'fd\
+\
+submit\'c0\'cc\'ba\'a5\'c6\'ae\'b0\'a1 \'b9\'df\'bb\'fd\'c7\'d2 \'b6\'a7\
+\'b5\'ce\'b0\'a1\'c1\'f6 \'b9\'e6\'b9\'fd\'c0\'b8\'b7\'ce \'b8\'b7\'c0\'bd\
+1. return false;\
+2. e.preventDefault();\
+\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\
+Session\
+: user\'b0\'a1 \'bc\'ad\'b9\'f6\'bf\'a1 \'c1\'a2\'bc\'d3\'b5\'c8 \'bb\'f3\'c5\'c2\
+\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\'b0\'b3\'c0\'ce \'c7\'c1\'b7\'ce\'c1\'a7\'c6\'ae vs \'c6\'c0 \'c7\'c1\'b7\'ce\'c1\'a7\'c6\'ae\
+\
+\'c7\'f9\'be\'f7, \'c5\'eb\'c0\'cf\'bc\'ba\
+>> \'c4\'bf\'b9\'c2\'b4\'cf\'c4\'c9\'c0\'cc\'bc\'c7 \'c1\'df\'bf\'e4\'bc\'ba \'b4\'eb\'b5\'ce\
 \
 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\
+cookie\'bf\'cd session\
+: \'c1\'a2\'bc\'d3\'c0\'da\'c0\'c7 \'bb\'f3\'c5\'c2\'c1\'a4\'ba\'b8\'b8\'a6 \'c0\'fa\'c0\'e5\'c7\'cf\'b4\'c2 \'bf\'eb\'b5\'b5\
+\
+cookie\'b4\'c2 \'bb\'e7\'bf\'eb\'c0\'da \'c4\'c4\'c7\'bb\'c5\'cd\'bf\'a1 \'c0\'fa\'c0\'e5\
+session\'c0\'ba \'bc\'ad\'b9\'f6\'bf\'a1 \'c0\'fa\'c0\'e5 >> \'bc\'ad\'b9\'f6\'bf\'a1 \'ba\'ce\'b4\'e3\'c0\'bb \'c1\'dc\
+\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\
+\'c0\'da\'b5\'bf\'b7\'ce\'b1\'d7\'c0\'ce\'c0\'ba \'b4\'eb\'ba\'ce\'ba\'d0 \'c4\'ed\'c5\'b0\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'c2 \'b0\'e6\'bf\'ec\'b0\'a1 \'b8\'b9\'b4\'d9\
+>> PC\'b9\'e6 \'b0\'b0\'c0\'ba \'b0\'f8\'bf\'eb PC\'bf\'a1\'bc\'ad \'c0\'da\'b5\'bf\'b7\'ce\'b1\'d7\'c0\'ce \'c7\'e3\'bf\'eb\'c0\'ba \'ba\'b8\'be\'c8\'c0\'cc \'b8\'c5\'bf\'ec \'c3\'eb\'be\'e0!\
+\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\
+Custom tag\
+: XML \'b1\'e2\'b9\'dd\'c0\'b8\'b7\'ce \'c5\'c2\'b1\'d7\'b8\'a6 \'c1\'f7\'c1\'a2 \'b8\'b8\'b5\'e9\'be\'ee\'bc\'ad \'bb\'e7\'bf\'eb\
+\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\
+EL\
+1. parameter \'b9\'de\'b1\'e2\
+>> $\{param.id\} or $\{param[\'a1\'b0id]\}\
+\
+2. Attribute \'b9\'de\'b1\'e2\
+>> $\{id\}\
+\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\
+PrepareStatement \'bb\'e7\'bf\'eb\'bd\'c3 \'c0\'e5\'c1\'a1\
+1. Sql \'b9\'ae\'c0\'bb \'c0\'db\'bc\'ba\'c7\'cf\'b4\'c2 \'b0\'cd\'c0\'cc \'c6\'ed\'b8\'ae\'c7\'cf\'b4\'d9.\
+2. Sql injection \'b0\'f8\'b0\'dd\'c0\'bb \'b9\'e6\'be\'ee\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
 \
 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
 \
+DAO ( Data Access Object )\
+: \'b5\'a5\'c0\'cc\'c5\'cd \'be\'d7\'bc\'bc\'bd\'ba \'b0\'b4\'c3\'bc\
+\
+DTO ( Data Transfer Object )\
+: \'b5\'a5\'c0\'cc\'c5\'cd \'b1\'b3\'c8\'af \'b0\'b4\'c3\'bc\
+\
+VO ( Value Object )\
+: \'b9\'eb\'b7\'f9 \'b0\'b4\'c3\'bc. DTO\'bf\'cd \'b0\'b0\'c0\'ba \'b0\'b3\'b3\'e4\'c0\'cc\'b3\'aa read only.\
+\'c3\'d6\'b1\'d9 \'b0\'e6\'c7\'e2 DTO == VO\
+\
+DTO / VO \'b4\'c2 data \'b4\'e3\'b4\'e7. \'c1\'ef Model\'c0\'bb \'c0\'c7\'b9\'cc\'c7\'d4.\
+\'c0\'da\'b9\'d9 \'c6\'c4\'c0\'cf\'c0\'bb \'bb\'fd\'bc\'ba\'c7\'d2 \'b6\'a7 Model\'c0\'bb \'b4\'e3\'b4\'e7\'c7\'cf\'b4\'c2 class\'b5\'e9\'c0\'ba \'b5\'da\'bf\'a1 vo\'b0\'a1 \'ba\'d9\'b4\'c2\'b4\'d9. Ex) MemberVO\
+\
+\
+Singleton \'c6\'d0\'c5\'cf\
+: \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba\'b8\'a6 \'c7\'cf\'b3\'aa\'b8\'b8 \'b8\'b8\'b5\'e9\'be\'ee\'bc\'ad \'bb\'e7\'bf\'eb\
+\
+class A\{\}\
+A a = new A();\
+A b = new A();\
+\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\
+JSP\'bf\'a1\'bc\'ad MVC\'c6\'d0\'c5\'cf\
+1. Model - \'b5\'a5\'c0\'cc\'c5\'cd - class - MemberVO\
+   View - UI - JSP - ***.jsp\
+   Controller - logic - servlet - class\
+\
+2. \'b8\'f0\'b5\'e7 \'b8\'b5\'c5\'a9. action\'bf\'a1\'b4\'c2 servlet\'c1\'d6\'bc\'d2 \'bb\'e7\'bf\'eb.\
+>> jsp\'b4\'c2 \'b8\'b5\'c5\'a9\'b7\'ce \'bb\'e7\'bf\'eb\'c7\'cf\'c1\'f6 \'be\'ca\'c0\'bd. \'b7\'ce\'c1\'f7\'c0\'bb \'b9\'dd\'b5\'e5\'bd\'c3 \'b0\'c5\'c3\'c4\'be\'df\'c7\'cf\'b1\'e2 \'b6\'a7\'b9\'ae << \'c0\'cc\'b8\'a7\'c0\'cc Controller\'c0\'ce \'c0\'cc\'c0\'af\'c0\'cc\'b4\'d9.\
+>> jsp \'c6\'e4\'c0\'cc\'c1\'f6\'b7\'ce \'c0\'cc\'b5\'bf\'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d8\'bc\'ad\'b4\'c2 servlet\'c0\'bb \'c5\'eb\'c7\'d8\'bc\'ad \'b0\'a3\'b4\'d9.\
+\
+3. JSP\'c6\'e4\'c0\'cc\'c1\'f6\'bf\'a1\'b4\'c2 \'b0\'a1\'b1\'de\'c0\'fb \'c0\'da\'b9\'d9\'c4\'da\'b5\'e5\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'c1\'f6 \'be\'ca\'b5\'b5\'b7\'cf \'c7\'d8\'be\'df\'c7\'d1\'b4\'d9.\
+>> <% %> \'ba\'b8\'b4\'d9\'b4\'c2 $\{ \}  el , <jsp: ~~ > \'be\'d7\'bc\'c7\'c5\'c2\'b1\'d7 , <c: ~~ > jstl \'b5\'ee\'c0\'bb \'bb\'e7\'bf\'eb\
+\
+4. Select, insert, update, delete\'b8\'a6 \'c3\'b3\'b8\'ae\'c7\'d2 \'b6\'a7 \'b9\'dd\'b5\'e5\'bd\'c3 VO\'b8\'a6 \'bb\'e7\'bf\'eb.\
+>> select\'c7\'d1 \'b0\'e1\'b0\'fa\'b8\'a6 VO\'bf\'a1 \'c0\'fa\'c0\'e5\'c7\'cf\'b0\'ed, \'c0\'cc VO\'b8\'a6 JSP\'b7\'ce \'b3\'d1\'b1\'e4\'b4\'d9.\
+>> \'c8\'ad\'b8\'e9 Form\'bf\'a1 \'c0\'d4\'b7\'c2\'c7\'d1 \'b0\'aa\'c0\'bb VO\'bf\'a1 \'c0\'fa\'c0\'e5\'c7\'cf\'b0\'ed, insert\'b9\'ae\'bf\'a1\'bc\'ad VO\'b0\'aa\'c0\'bb \'c0\'cc\'bf\'eb\'c7\'d8\'bc\'ad \'c3\'b3\'b8\'ae\
+\
+\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\
+MVC \'c6\'d0\'c5\'cf \'b1\'b8\'c7\'f6 \'bc\'f8\'bc\'ad(\'b1\'e2\'c3\'ca)\
+\
+1. \'c5\'d7\'c0\'cc\'ba\'ed \'bb\'fd\'bc\'ba\
+2. VO\'bb\'fd\'bc\'ba( Model )\
+<< DBManager \'b8\'a6 \'b5\'fb\'b7\'ce \'bb\'fd\'bc\'ba\'c7\'d8\'b5\'b5 \'b5\'ca (DBCP\'bf\'ac\'b0\'e1 \'c4\'da\'b5\'e5)>>\
+3. DAO\'bb\'fd\'bc\'ba\
+4. Servlet\'c0\'db\'bc\'ba ( Controller )\
+5. JSP( View ) \'c0\'db\'bc\'ba\
+\
+>> \'c1\'ef \'c4\'da\'b5\'f9 \'bc\'f8\'bc\'ad\'b4\'c2 M > C > V \'bc\'f8\'bc\'ad\'c0\'cc\'b4\'d9.\
+\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\
+Persistence Layer\
+: \'bf\'b5\'b1\'b8\'b0\'e8\'c3\'fe. DAO\
+\
+Business Layer\
+: \'be\'f7\'b9\'ab(\'b1\'d4\'c4\'a2)\'b0\'e8\'c3\'fe. Business Logic\'c3\'b3\'b8\'ae. Service\
+\
+Presentation Layer\
+: \'c8\'ad\'b8\'e9\'b0\'e8\'c3\'fe. UI. JSP\
+\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\
+Node.js\
+>> Chrome \'ba\'ea\'b6\'f3\'bf\'ec\'c0\'fa\'c0\'c7 V8 javascript \'bf\'a3\'c1\'f8\'c0\'bb \'b1\'e2\'b9\'dd\'c0\'b8\'b7\'ce \'b8\'b8\'b5\'e7 javascript \'bd\'c7\'c7\'e0\'c8\'af\'b0\'e6\
+>> \'bc\'ad\'b9\'f6\'b8\'a6 \'b1\'b8\'c3\'e0\'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d1 \'bd\'c7\'c7\'e0\'c8\'af\'b0\'e6\
+\
+\'c1\'d6\'bf\'e4\'c6\'af\'c2\'a1\
+1. module\'bb\'e7\'bf\'eb\
+>> module\'c0\'cc\'b6\'f5, \'c0\'cc\'b9\'cc \'b0\'b3\'b9\'df\'b5\'c8 \'b6\'f3\'c0\'cc\'ba\'ea\'b7\'af\'b8\'ae(\'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae \'b5\'ee)\
+>> 3rd party\'b0\'b3\'b9\'df\'c0\'da\'b5\'e9\'c0\'cc \'b8\'b9\'c0\'ba module\'c0\'bb \'b0\'b3\'b9\'df\'c7\'d8\'bc\'ad \'b0\'f8\'b0\'b3\
+\
+2. Non blocking I/O \
+\pard\pardeftab720\sl408\partightenfactor0
+
+\f1\fs27\fsmilli13600 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 const\cf4 \strokec4  fs \cf5 \strokec5 =\cf4 \strokec4  \cf6 \strokec6 require\cf7 \strokec7 (\cf8 \strokec8 'fs\'92\cf7 \strokec7 );
+\f0 \
+/file.md \'c0\'c7 \'b5\'a5\'c0\'cc\'c5\'cd\'b0\'a1 err\'bf\'cd data\'bf\'a1 \'bc\'f8\'c2\'f7\'c0\'fb\'c0\'b8\'b7\'ce \'b5\'e9\'be\'ee\'b0\'a1\'b8\'e7 \'bd\'c7\'c7\'e0
+\f1 \cf4 \strokec4 \
+fs\cf7 \strokec7 .\cf6 \strokec6 readFile\cf7 \strokec7 (\cf8 \strokec8 '/file.md'\cf7 \strokec7 ,\cf4 \strokec4  \cf7 \strokec7 (\cf4 \strokec4 err\cf7 \strokec7 ,\cf4 \strokec4  data\cf7 \strokec7 )\cf4 \strokec4  \cf5 \strokec5 =>\cf4 \strokec4  \cf7 \strokec7 \{\cf4 \strokec4 \
+  \cf2 \strokec2 if\cf4 \strokec4  \cf7 \strokec7 (\cf4 \strokec4 err\cf7 \strokec7 )\cf4 \strokec4  \cf2 \strokec2 throw\cf4 \strokec4  err\cf7 \strokec7 ;\cf4 \strokec4 \
+\cf7 \strokec7 \});
+\fs19\fsmilli9600 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+3. \'ba\'f1\'b1\'b3\'c0\'fb \'b0\'a1\'bc\'ba\'ba\'f1\'b0\'a1 \'bf\'ec\'bc\'f6\'c7\'cf\'b4\'d9\
+>> \'c0\'fa\'bb\'e7\'be\'e7\'c0\'c7 H/W\'bf\'a1\'bc\'ad \'b8\'b9\'c0\'ba \'b5\'bf\'bd\'c3\'c1\'a2\'bc\'d3\'c0\'da \'c3\'b3\'b8\'ae.\
+\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\
+\
+Jsp / MVC + Command pattern / database : MySQL / paging / Comment \'b1\'b8\'c7\'f6\
 }

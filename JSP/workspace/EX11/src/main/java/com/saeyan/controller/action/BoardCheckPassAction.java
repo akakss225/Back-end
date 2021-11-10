@@ -22,6 +22,7 @@ public class BoardCheckPassAction implements Action {
 		BoardDAO bDao = BoardDAO.getInstance();
 		BoardVO bVo = bDao.selectOneBoardByNum(num);
 		
+		
 		if(bVo.getPass().equals(pass)) {
 			url = "/board/checkSuccess.jsp";
 		}

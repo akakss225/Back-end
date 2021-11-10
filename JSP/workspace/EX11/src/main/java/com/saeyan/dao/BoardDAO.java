@@ -335,5 +335,25 @@ public class BoardDAO {
 		}
 	}
 	
+	public void deleteReply(String num) {
+		String sql = "delete from reply where no=?";
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, num);
+			
+			pstmt.executeUpdate();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
 	
 }
