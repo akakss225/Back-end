@@ -171,6 +171,39 @@ public class BoardDAO {
 		}
 		return bVo;
 	}
+	public ReplyVO selectOneReplyByNum(String num) {
+		String sql = "select * from reply where no=?";
+		
+		ReplyVO rVo = null;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, num);
+			rs = pstmt.executeQuery();
+					
+			if(rs.next()) {
+				rVo = new ReplyVO();
+				rVo.setNo(rs.getInt("no"));
+				rVo.setpNum(rs.getInt("pNum"));
+				rVo.setPassword(rs.getString("password"));
+				rVo.setName(rs.getString("name"));
+				rVo.setContent(rs.getString("content"));
+				rVo.setWritedate(rs.getTimestamp("writedate"));
+			}
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			DBManager.close(conn, pstmt, rs);
+		}
+		return rVo;
+	}
 	
 	public void updateBoard(BoardVO bVo) {
 		String sql = "update board set name=?, email=?, pass=?, title=?, content=? where num=?";

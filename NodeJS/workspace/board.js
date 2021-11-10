@@ -107,7 +107,7 @@ app.get('/content/:id', function (request, response) {
 });
 
 // edit링크를 클릭했을 때 (수정)
-app.get('/edit/:id', function (request, response) {
+app.get('/edit/:id', function (request, response) { // 이때 /:id 값으로 들어온 command는 아래 쿼리문의 id로 간다.
     // 파일을 읽습니다.
     fs.readFile('views/board_edit.html', 'utf8', function (error, data) {
         // 데이터베이스 쿼리를 실행합니다.

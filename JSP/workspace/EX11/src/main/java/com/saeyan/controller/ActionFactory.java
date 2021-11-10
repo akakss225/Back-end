@@ -10,6 +10,8 @@ import com.saeyan.controller.action.BoardUpdateFormAction;
 import com.saeyan.controller.action.BoardViewAction;
 import com.saeyan.controller.action.BoardWriteAction;
 import com.saeyan.controller.action.BoardWriteFormAction;
+import com.saeyan.controller.action.ReplyCheckPassAction;
+import com.saeyan.controller.action.ReplyCheckPassFormAction;
 import com.saeyan.controller.action.ReplyDeleteAction;
 import com.saeyan.controller.action.ReplyWriteAction;
 
@@ -57,6 +59,12 @@ public class ActionFactory {
 		}
 		else if(command.equals("reply_write")) {
 			action = new ReplyWriteAction();
+		}
+		else if(command.equals("reply_check_pass")) {
+			action = new ReplyCheckPassAction();
+		}
+		else if(command.equals("reply_check_pass_form")) {
+			action = new ReplyCheckPassFormAction();
 		}
 		else if(command.equals("reply_delete")) {
 			action = new ReplyDeleteAction();
