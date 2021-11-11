@@ -25,12 +25,14 @@
             background-color: deepskyblue;
             text-shadow: none;
         }
-        #content div:nth-child(2n){text-align: right;}
-        #content div:nth-child(2n+1){text-align: left;}
+        #content div.right{text-align: right;}
+        #content div.left{text-align: left;}
         
-        .right{
-            text-align: right;
-            background-color: orange;
+        .right span{
+            background-color: deepskyblue;
+        }
+        .left span{
+            background-color: #eee;
         }
         
         
@@ -42,30 +44,46 @@
             //message처리
             socket.on('message',function(data){
                 var output="";
-                output+="<div class='msg'>"
-                output+="<span>"
-                output+="   <h3>"+data.name+"</h3>";
-                output+="   <p>"+data.message+"</p>";
-                output+="   <p>"+data.date+"</p>";
-                output+="</span>"
-                output+="</div>";
+                
+                if(data.name == $("#name").val()){
+                    output+="<div class='msg right'>"
+                    output+="<span>"
+                    output+="   <h3>"+data.name+"</h3>";
+                    output+="   <p>"+data.message+"</p>";
+                    output+="   <p>"+data.date+"</p>";
+                    output+="</span>";
+                    output+="</div>";
+                }
+                else{
+                    output+="<div class='msg left'>"
+                    output+="<span>"
+                    output+="   <h3>"+data.name+"</h3>";
+                    output+="   <p>"+data.message+"</p>";
+                    output+="   <p>"+data.date+"</p>";
+                    output+="</span>";
+                    output+="</div>";
+                }
                 
                 // id가 content인 ul태그 안에 추가
                 $(output).appendTo("#content");
+                
+                
                 //스크롤 이동
                 $(document).scrollTop($(document).height());
-
-
 //                $("#content").listview('refresh');//목록 새로 고침
                 
             });
+
             
             //버튼클릭시 메시지 전송
             $("button").click(function(){
+                
+                console.log($("#name").val());
                 socket.emit("message",{
                     name:$("#name").val(),
                     message:$("#message").val(),
                     date:new Date().toLocaleTimeString()
+                    
                 });
             });
             
