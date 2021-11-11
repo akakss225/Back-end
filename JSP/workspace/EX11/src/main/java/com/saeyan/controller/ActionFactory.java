@@ -13,6 +13,8 @@ import com.saeyan.controller.action.BoardWriteFormAction;
 import com.saeyan.controller.action.ReplyCheckPassAction;
 import com.saeyan.controller.action.ReplyCheckPassFormAction;
 import com.saeyan.controller.action.ReplyDeleteAction;
+import com.saeyan.controller.action.ReplyUpdateAction;
+import com.saeyan.controller.action.ReplyUpdateFormAction;
 import com.saeyan.controller.action.ReplyWriteAction;
 
 public class ActionFactory {
@@ -68,6 +70,12 @@ public class ActionFactory {
 		}
 		else if(command.equals("reply_delete")) {
 			action = new ReplyDeleteAction();
+		}
+		else if(command.equals("reply_update_form")) {
+			action = new ReplyUpdateFormAction();
+		}
+		else if(command.equals("reply_update")) {
+			action = new ReplyUpdateAction();
 		}
 		return action;
 	}

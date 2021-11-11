@@ -135,6 +135,7 @@ public class BoardDAO {
 		}
 	}
 	
+	
 	// 게시판 글 상세 내용 보기 : 글번호로 찾아온다. : 실패시 null;
 	public BoardVO selectOneBoardByNum(String num) {
 		String sql = "select * from board where num=?";
@@ -386,6 +387,28 @@ public class BoardDAO {
 			e.printStackTrace();
 		}
 		
+	}
+	public void updateReply(ReplyVO rVo) {
+		String sql = "update reply set name=?, password=?, content=? where no=?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, rVo.getName());
+			pstmt.setString(2, rVo.getPassword());
+			pstmt.setString(3, rVo.getContent());
+			pstmt.setInt(4, rVo.getNo());
+			
+			pstmt.executeUpdate();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			DBManager.close(conn, pstmt);
+		}
 	}
 	
 	

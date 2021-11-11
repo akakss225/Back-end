@@ -19,6 +19,9 @@
 		alert("댓글을 삭제하였습니다.")
 		window.opener.parent.location.href="BoardServlet?command=reply_delete&num=${param.num}";
 	}
+	else if(window.name == "reply_update"){
+		window.opener.parent.location.href="BoardServlet?command=reply_update_form&num=${param.num}";
+	}
 	wndow.close();
 </script>
 </body>

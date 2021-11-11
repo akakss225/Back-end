@@ -49,7 +49,7 @@
 						<pre>${reply.content }</pre>
 					</td>
 					<td width="20%" style="border:none;">
-						<input type="button" value="수정">
+						<input type="button" value="수정" onclick="open_win('BoardServlet?command=reply_check_pass_form&num=${reply.no}', 'reply_update')">
 						<input type="button" value="삭제" onclick="open_win('BoardServlet?command=reply_check_pass_form&num=${reply.no}', 'reply_delete')">
 					</td>
 				</tr>
