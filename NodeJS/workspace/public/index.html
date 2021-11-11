@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DB Basic</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            function selectData(){
+                // 아웃풋 내용물 비우기
+                $("#output").empty();
+
+                // AJax실행
+                $.getJSON("/products", function(data){
+                    $(data).each(function(index, item){
+                        var output = "";
+                        output += "<tr>";
+                        output += "<td>" + item.name + "</td>";
+                        output += "<td>" + item.modelnumber + "</td>";
+                        output += "<td>" + item.series + "</td>";
+                        output += "</tr>";
+                        $("#output").appendTo(output);
+                    });
+                });
+            }
+
+            // 데이터 추가 구문 >> insert
+            $("insert_form").submit(function(event){
+                // 기본적으로 submit을 누르면, form태그의 값으로 자동 submit이 됨. 이를 막아주기 위해 preventDefault해줌.
+                event.preventDefault();
+                // form 태그를 대상으로 serialize를 하면, form의 객체를 한번에 불러올 수 있다.
+                var date = $(this).serialize();
+                // post방식으로 data를 넘겨주고, 처리가 완전히 끝나면 바로 call back함수로 selectData를 불러 초기화 해줌.
+                $.post("/products", data, selectData);
+            });
+
+            // 초기화면 설정
+            selectData();
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <form id="insert_form">
+        <fieldset>
+            <legend>데이터 추가</legend>
+            <table>
+                <tr>
+                    <td><label>상품명</label></td>
+                    <td><input type="text" name="name" /></td>
+                </tr>
+                <tr>
+                    <td><label>모델 번호</label></td>
+                    <td><input type="text" name="modelnumber" /></td>
+                </tr>
+                <tr>
+                    <td><label>시리즈</label></td>
+                    <td><input type="text" name="series" /></td>
+                </tr>
+            </table>
+            <input type="submit"value="추가" />
+        </fieldset>
+        </form>
+    </div>
+    <table id="output" border="1">
+
+    </table>
+</body>
+</html>

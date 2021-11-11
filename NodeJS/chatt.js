@@ -1,4 +1,3 @@
-
 var http = require('http');
 var fs = require('fs');
 var socketio = require('socket.io');
@@ -14,7 +13,7 @@ var server = http.createServer(function (request, response) {
   console.log('Server Running at http://127.0.0.1:52273');
 });
 
-
+// 이 부분이 서버를 불러오는 코드
 var io = socketio.listen(server);
 io.sockets.on('connection', function (socket) {
   

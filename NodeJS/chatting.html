@@ -28,8 +28,8 @@
         #content div:nth-child(2n){text-align: right;}
         #content div:nth-child(2n+1){text-align: left;}
         
-        .left{
-            text-align: left;
+        .right{
+            text-align: right;
             background-color: orange;
         }
         
@@ -74,29 +74,29 @@
     </script>
 </head>
 <body>
-   <div data-role="page" id="page1">
-       <div data-role="header">
-           멀티 채팅
-       </div>
-       <div data-role="cotent">
-            <h1>이름</h1>
-            <input type="text" id="name">
-            <a data-role="button" href="#page2">시작</a>
-       </div>     
-   </div>
-   <div data-role="page" id="page2">
-       <div data-role="header">
-           멀티 채팅
-       </div>
-       <div data-role="content">
-           <div id="content">
-               
-               
-           </div>
-           <input type="text" id="message">
-           <button>전송</button>
-       </div>
-   </div>
+    <div data-role="page" id="page1">
+        <div data-role="header">
+            멀티 채팅
+        </div>
+        <div data-role="cotent">
+                <h1>이름</h1>
+                <input type="text" id="name">
+                <a data-role="button" href="#page2">시작</a>
+        </div>     
+    </div>
+    <div data-role="page" id="page2">
+        <div data-role="header">
+            멀티 채팅
+        </div>
+        <div data-role="content">
+            <div id="content">
+                
+                
+            </div>
+            <input type="text" id="message">
+            <button>전송</button>
+        </div>
+    </div>
     
 </body>
 </html>
